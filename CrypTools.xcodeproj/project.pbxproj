@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD37C7EB20805A7D00834BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C7EA20805A7D00834BFF /* AppDelegate.swift */; };
+		DD37C7ED20805A7D00834BFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C7EC20805A7D00834BFF /* ViewController.swift */; };
+		DD37C7F020805A7D00834BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD37C7EE20805A7D00834BFF /* Main.storyboard */; };
+		DD37C7F220805A7E00834BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD37C7F120805A7E00834BFF /* Assets.xcassets */; };
+		DD37C7F520805A7E00834BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD37C7F320805A7E00834BFF /* LaunchScreen.storyboard */; };
+		DD37C7FA20805A7F00834BFF /* CrypTools WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DD37C7F920805A7F00834BFF /* CrypTools WatchKit App.app */; };
+		DD37C80020805A7F00834BFF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD37C7FE20805A7F00834BFF /* Interface.storyboard */; };
+		DD37C80220805A7F00834BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD37C80120805A7F00834BFF /* Assets.xcassets */; };
+		DD37C80920805A7F00834BFF /* CrypTools WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DD37C80820805A7F00834BFF /* CrypTools WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD37C80E20805A7F00834BFF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C80D20805A7F00834BFF /* InterfaceController.swift */; };
+		DD37C81020805A7F00834BFF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C80F20805A7F00834BFF /* ExtensionDelegate.swift */; };
+		DD37C81220805A7F00834BFF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C81120805A7F00834BFF /* NotificationController.swift */; };
+		DD37C81420805A8000834BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD37C81320805A8000834BFF /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD37C7FB20805A7F00834BFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD37C7DF20805A7D00834BFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD37C7F820805A7F00834BFF;
+			remoteInfo = "CrypTools WatchKit App";
+		};
+		DD37C80A20805A7F00834BFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD37C7DF20805A7D00834BFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD37C80720805A7F00834BFF;
+			remoteInfo = "CrypTools WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DD37C81C20805A8000834BFF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DD37C80920805A7F00834BFF /* CrypTools WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD37C82020805A8000834BFF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				DD37C7FA20805A7F00834BFF /* CrypTools WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DD37C7E720805A7D00834BFF /* CrypTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrypTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD37C7EA20805A7D00834BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD37C7EC20805A7D00834BFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD37C7EF20805A7D00834BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD37C7F120805A7E00834BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD37C7F420805A7E00834BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD37C7F620805A7E00834BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD37C7F920805A7F00834BFF /* CrypTools WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrypTools WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD37C7FF20805A7F00834BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		DD37C80120805A7F00834BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD37C80320805A7F00834BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD37C80820805A7F00834BFF /* CrypTools WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CrypTools WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD37C80D20805A7F00834BFF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		DD37C80F20805A7F00834BFF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		DD37C81120805A7F00834BFF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		DD37C81320805A8000834BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD37C81520805A8000834BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD37C81620805A8000834BFF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD37C7E420805A7D00834BFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD37C80520805A7F00834BFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD37C7DE20805A7D00834BFF = {
+			isa = PBXGroup;
+			children = (
+				DD37C7E920805A7D00834BFF /* CrypTools */,
+				DD37C7FD20805A7F00834BFF /* CrypTools WatchKit App */,
+				DD37C80C20805A7F00834BFF /* CrypTools WatchKit Extension */,
+				DD37C7E820805A7D00834BFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD37C7E820805A7D00834BFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD37C7E720805A7D00834BFF /* CrypTools.app */,
+				DD37C7F920805A7F00834BFF /* CrypTools WatchKit App.app */,
+				DD37C80820805A7F00834BFF /* CrypTools WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD37C7E920805A7D00834BFF /* CrypTools */ = {
+			isa = PBXGroup;
+			children = (
+				DD37C7EA20805A7D00834BFF /* AppDelegate.swift */,
+				DD37C7EC20805A7D00834BFF /* ViewController.swift */,
+				DD37C7EE20805A7D00834BFF /* Main.storyboard */,
+				DD37C7F120805A7E00834BFF /* Assets.xcassets */,
+				DD37C7F320805A7E00834BFF /* LaunchScreen.storyboard */,
+				DD37C7F620805A7E00834BFF /* Info.plist */,
+			);
+			path = CrypTools;
+			sourceTree = "<group>";
+		};
+		DD37C7FD20805A7F00834BFF /* CrypTools WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				DD37C7FE20805A7F00834BFF /* Interface.storyboard */,
+				DD37C80120805A7F00834BFF /* Assets.xcassets */,
+				DD37C80320805A7F00834BFF /* Info.plist */,
+			);
+			path = "CrypTools WatchKit App";
+			sourceTree = "<group>";
+		};
+		DD37C80C20805A7F00834BFF /* CrypTools WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DD37C80D20805A7F00834BFF /* InterfaceController.swift */,
+				DD37C80F20805A7F00834BFF /* ExtensionDelegate.swift */,
+				DD37C81120805A7F00834BFF /* NotificationController.swift */,
+				DD37C81320805A8000834BFF /* Assets.xcassets */,
+				DD37C81520805A8000834BFF /* Info.plist */,
+				DD37C81620805A8000834BFF /* PushNotificationPayload.apns */,
+			);
+			path = "CrypTools WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD37C7E620805A7D00834BFF /* CrypTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD37C82120805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools" */;
+			buildPhases = (
+				DD37C7E320805A7D00834BFF /* Sources */,
+				DD37C7E420805A7D00834BFF /* Frameworks */,
+				DD37C7E520805A7D00834BFF /* Resources */,
+				DD37C82020805A8000834BFF /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD37C7FC20805A7F00834BFF /* PBXTargetDependency */,
+			);
+			name = CrypTools;
+			productName = CrypTools;
+			productReference = DD37C7E720805A7D00834BFF /* CrypTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD37C7F820805A7F00834BFF /* CrypTools WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD37C81D20805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools WatchKit App" */;
+			buildPhases = (
+				DD37C7F720805A7F00834BFF /* Resources */,
+				DD37C81C20805A8000834BFF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD37C80B20805A7F00834BFF /* PBXTargetDependency */,
+			);
+			name = "CrypTools WatchKit App";
+			productName = "CrypTools WatchKit App";
+			productReference = DD37C7F920805A7F00834BFF /* CrypTools WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		DD37C80720805A7F00834BFF /* CrypTools WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD37C81920805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools WatchKit Extension" */;
+			buildPhases = (
+				DD37C80420805A7F00834BFF /* Sources */,
+				DD37C80520805A7F00834BFF /* Frameworks */,
+				DD37C80620805A7F00834BFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CrypTools WatchKit Extension";
+			productName = "CrypTools WatchKit Extension";
+			productReference = DD37C80820805A7F00834BFF /* CrypTools WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD37C7DF20805A7D00834BFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Arthur Guiot";
+				TargetAttributes = {
+					DD37C7E620805A7D00834BFF = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					DD37C7F820805A7F00834BFF = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					DD37C80720805A7F00834BFF = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = DD37C7E220805A7D00834BFF /* Build configuration list for PBXProject "CrypTools" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD37C7DE20805A7D00834BFF;
+			productRefGroup = DD37C7E820805A7D00834BFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD37C7E620805A7D00834BFF /* CrypTools */,
+				DD37C7F820805A7F00834BFF /* CrypTools WatchKit App */,
+				DD37C80720805A7F00834BFF /* CrypTools WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD37C7E520805A7D00834BFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD37C7F520805A7E00834BFF /* LaunchScreen.storyboard in Resources */,
+				DD37C7F220805A7E00834BFF /* Assets.xcassets in Resources */,
+				DD37C7F020805A7D00834BFF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD37C7F720805A7F00834BFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD37C80220805A7F00834BFF /* Assets.xcassets in Resources */,
+				DD37C80020805A7F00834BFF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD37C80620805A7F00834BFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD37C81420805A8000834BFF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD37C7E320805A7D00834BFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD37C7ED20805A7D00834BFF /* ViewController.swift in Sources */,
+				DD37C7EB20805A7D00834BFF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD37C80420805A7F00834BFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD37C81220805A7F00834BFF /* NotificationController.swift in Sources */,
+				DD37C81020805A7F00834BFF /* ExtensionDelegate.swift in Sources */,
+				DD37C80E20805A7F00834BFF /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD37C7FC20805A7F00834BFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD37C7F820805A7F00834BFF /* CrypTools WatchKit App */;
+			targetProxy = DD37C7FB20805A7F00834BFF /* PBXContainerItemProxy */;
+		};
+		DD37C80B20805A7F00834BFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD37C80720805A7F00834BFF /* CrypTools WatchKit Extension */;
+			targetProxy = DD37C80A20805A7F00834BFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD37C7EE20805A7D00834BFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD37C7EF20805A7D00834BFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD37C7F320805A7E00834BFF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD37C7F420805A7E00834BFF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DD37C7FE20805A7F00834BFF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD37C7FF20805A7F00834BFF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD37C81720805A8000834BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD37C81820805A8000834BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD37C81A20805A8000834BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				INFOPLIST_FILE = "CrypTools WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		DD37C81B20805A8000834BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				INFOPLIST_FILE = "CrypTools WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		DD37C81E20805A8000834BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				IBSC_MODULE = CrypTools_WatchKit_Extension;
+				INFOPLIST_FILE = "CrypTools WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		DD37C81F20805A8000834BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				IBSC_MODULE = CrypTools_WatchKit_Extension;
+				INFOPLIST_FILE = "CrypTools WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		DD37C82220805A8000834BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				INFOPLIST_FILE = CrypTools/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD37C82320805A8000834BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				INFOPLIST_FILE = CrypTools/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD37C7E220805A7D00834BFF /* Build configuration list for PBXProject "CrypTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD37C81720805A8000834BFF /* Debug */,
+				DD37C81820805A8000834BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD37C81920805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD37C81A20805A8000834BFF /* Debug */,
+				DD37C81B20805A8000834BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD37C81D20805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD37C81E20805A8000834BFF /* Debug */,
+				DD37C81F20805A8000834BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD37C82120805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD37C82220805A8000834BFF /* Debug */,
+				DD37C82320805A8000834BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD37C7DF20805A7D00834BFF /* Project object */;
+}
