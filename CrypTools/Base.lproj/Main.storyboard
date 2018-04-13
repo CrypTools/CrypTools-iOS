@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoMono-Bold.ttf">
+            <string>RobotoMono-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -21,6 +26,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fT-8Z-Ceg" userLabel="BG Icon Label">
                                 <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                                 <color key="backgroundColor" red="0.16076645255088806" green="0.16079574823379517" blue="0.16076007485389709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="aI2-bZ-5lG"/>
+                                    <constraint firstAttribute="width" constant="96" id="fyZ-UK-W4P"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.5" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -31,16 +40,67 @@
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="Qe9-he-IuC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="vD6-B8-HWD"/>
                                     <constraint firstAttribute="height" constant="48" id="ySC-V9-kFg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWT-oY-bjc">
                                 <rect key="frame" x="94" y="0.0" width="281" height="96"/>
                                 <color key="backgroundColor" white="0.30216877682264459" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="aKD-il-ppQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xhu-ad-oIj">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LevelCell" rowHeight="200" id="UjG-iX-7wy" customClass="LevelCell" customModule="CrypTools" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UjG-iX-7wy" id="9Nf-mk-a3M">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="#1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwh-0W-jde" customClass="NumberLabel" customModule="CrypTools" customModuleProvider="target">
+                                                    <rect key="frame" x="77" y="11" width="220" height="96"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="96" id="Djb-s4-A6d"/>
+                                                        <constraint firstAttribute="width" constant="220" id="X6V-Zy-U08"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="RobotoMono-Bold" family="Roboto Mono" pointSize="32"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caesar Cipher" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw1-Xz-lCV" customClass="NumberLabel" customModule="CrypTools" customModuleProvider="target">
+                                                    <rect key="frame" x="77" y="115" width="220" height="74"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.16076645255088806" green="0.16079574823379517" blue="0.16076007485389709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="RobotoMono-Bold" family="Roboto Mono" pointSize="19"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Uwh-0W-jde" firstAttribute="centerX" secondItem="9Nf-mk-a3M" secondAttribute="centerX" id="7Zg-g8-Myc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LevelIndex" destination="Uwh-0W-jde" id="HWu-dc-Fk7"/>
+                                            <outlet property="LevelName" destination="cw1-Xz-lCV" id="Myg-iV-k8S"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -48,8 +108,12 @@
                             <constraint firstItem="0fT-8Z-Ceg" firstAttribute="top" secondItem="JWT-oY-bjc" secondAttribute="top" id="5K0-z2-0hQ"/>
                             <constraint firstAttribute="trailing" secondItem="JWT-oY-bjc" secondAttribute="trailing" id="9sc-LP-yol"/>
                             <constraint firstItem="JWT-oY-bjc" firstAttribute="leading" secondItem="m6M-AI-S1I" secondAttribute="trailing" constant="22" id="Gui-6m-QnX"/>
+                            <constraint firstItem="Xhu-ad-oIj" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="M00-00-XuV"/>
+                            <constraint firstItem="Xhu-ad-oIj" firstAttribute="bottom" secondItem="Uee-0j-aNJ" secondAttribute="bottom" id="OGV-pk-3gR"/>
                             <constraint firstItem="m6M-AI-S1I" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="24" id="QP2-64-N0h"/>
                             <constraint firstItem="0fT-8Z-Ceg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YKL-ND-S8E"/>
+                            <constraint firstItem="Xhu-ad-oIj" firstAttribute="top" secondItem="0fT-8Z-Ceg" secondAttribute="bottom" id="ZJw-0a-ZbD"/>
+                            <constraint firstItem="Xhu-ad-oIj" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" id="aVH-2n-mDD"/>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="bottom" secondItem="0fT-8Z-Ceg" secondAttribute="bottom" constant="571" id="f7I-Yk-q8z"/>
                             <constraint firstItem="0fT-8Z-Ceg" firstAttribute="baseline" secondItem="JWT-oY-bjc" secondAttribute="baseline" id="fF9-Q3-AsO"/>
                             <constraint firstItem="m6M-AI-S1I" firstAttribute="centerX" secondItem="0fT-8Z-Ceg" secondAttribute="centerX" id="mde-Vl-aqg"/>
@@ -57,6 +121,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
+                    <connections>
+                        <outlet property="TableView" destination="Xhu-ad-oIj" id="2iC-KM-nC2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

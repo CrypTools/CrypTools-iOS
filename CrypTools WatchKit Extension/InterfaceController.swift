@@ -22,7 +22,10 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-		Ring.startAnimatingWithImages(in: NSMakeRange(0, 50), duration: 2, repeatCount: 1)
+		let appGroupID = "group.com.arguiot.CrypTools"
+		let defaults = UserDefaults(suiteName: appGroupID)
+		let range = Int((defaults?.string(forKey: "done")) ?? "0")
+		Ring.startAnimatingWithImages(in: NSMakeRange(0, range! + 1), duration: 1.5, repeatCount: 1)
     }
     
     override func didDeactivate() {
