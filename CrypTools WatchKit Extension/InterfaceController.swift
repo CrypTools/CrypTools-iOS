@@ -9,18 +9,20 @@
 import WatchKit
 import Foundation
 
-
 class InterfaceController: WKInterfaceController {
 
-    override func awake(withContext context: Any?) {
+	@IBOutlet var Ring: WKInterfaceImage!
+	override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+		Ring.setImageNamed("")
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+		Ring.startAnimatingWithImages(in: NSMakeRange(0, 50), duration: 2, repeatCount: 1)
     }
     
     override func didDeactivate() {
