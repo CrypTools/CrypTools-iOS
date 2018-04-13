@@ -29,7 +29,6 @@
                                 <color key="backgroundColor" white="0.30216877682264459" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="nzD-Zr-gXd"/>
-                                    <constraint firstAttribute="height" constant="140" id="uBf-po-2sN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,7 +119,6 @@
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="top" secondItem="JWT-oY-bjc" secondAttribute="bottom" constant="1" id="CO4-XB-kGI"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="bottom" secondItem="Uee-0j-aNJ" secondAttribute="bottom" id="Dmb-1W-OpO"/>
                             <constraint firstItem="JWT-oY-bjc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GEI-sO-0Lp"/>
-                            <constraint firstItem="JWT-oY-bjc" firstAttribute="bottom" secondItem="0fT-8Z-Ceg" secondAttribute="bottom" id="LQP-S2-bQT"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="M00-00-XuV"/>
                             <constraint firstItem="JWT-oY-bjc" firstAttribute="top" secondItem="0fT-8Z-Ceg" secondAttribute="top" id="N2h-ok-JoR"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="bottom" secondItem="Uee-0j-aNJ" secondAttribute="bottom" id="OGV-pk-3gR"/>
