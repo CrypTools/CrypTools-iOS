@@ -13,17 +13,23 @@ import SwiftyJSON
 class ViewController: UIViewController, UITextFieldDelegate {
 	
 	@IBOutlet weak var TableView: UITableView!
+	@IBOutlet weak var Loading: UIActivityIndicatorView!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
+		self.levels = [] // Emptying levels to make sure that the app is reloading each levels
+		
 		UIApplication.shared.statusBarStyle = .lightContent
 		
 		defaults()
 		
 		TableView.delegate = self
 		TableView.dataSource = self
-		TableView.rowHeight = 200
+		TableView.rowHeight = 300
 		TableView.tableFooterView = UIView(frame: CGRect.zero)
+		TableView.separatorStyle = .none
 		
 		getLevels()
 	}
@@ -38,8 +44,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	func defaults() {
 		let appGroupID = "group.com.arguiot.CrypTools"
 		let defaults = UserDefaults(suiteName: appGroupID)
-		if (defaults?.string(forKey: "done") == nil) {
-			defaults?.setValue(0, forKey: "done")
+		if (defaults?.array(forKey: "done") == nil) {
+			defaults?.setValue([], forKey: "done")
+			defaults?.setValue(1, forKey: "levels")
 		}
 	}
 	var levels: [Level] = []
@@ -50,7 +57,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 			do {
 				let json = try JSON(data: response.data!)
 				let noob = json["challenges"]["noob"]
-				print("Got JSON data: \(noob.arrayValue)")
+				
 				self.TableView.beginUpdates()
 				var indexes: [IndexPath] = []
 				for i in noob.arrayValue {
@@ -62,9 +69,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
 				}
 				self.TableView.insertRows(at: indexes, with: .automatic)
 				self.TableView.endUpdates()
+				
+				self.Loading.isHidden = true
+				
+				let appGroupID = "group.com.arguiot.CrypTools"
+				let defaults = UserDefaults(suiteName: appGroupID)
+				defaults?.setValue(self.levels.count, forKey: "levels")
 			} catch {
 				print("JSON Parsing Error")
 			}
+		}
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let path = TableView.indexPathForSelectedRow {
+			let row = path.row
+			let LevelC = segue.destination as! LevelController
+			LevelC.level = self.levels[row]
 		}
 	}
 }

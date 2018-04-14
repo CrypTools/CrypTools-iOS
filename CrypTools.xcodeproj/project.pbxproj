@@ -37,6 +37,11 @@
 		DD37C81020805A7F00834BFF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C80F20805A7F00834BFF /* ExtensionDelegate.swift */; };
 		DD37C81220805A7F00834BFF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C81120805A7F00834BFF /* NotificationController.swift */; };
 		DD37C81420805A8000834BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD37C81320805A8000834BFF /* Assets.xcassets */; };
+		DD4BDF9F2081A99300498B14 /* Down.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4BDF9E2081A99300498B14 /* Down.framework */; };
+		DD4BDFA02081A99300498B14 /* Down.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD4BDF9E2081A99300498B14 /* Down.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4BDFA12081AF4900498B14 /* LevelController.swift */; };
+		DD4BDFA42081B8AC00498B14 /* github-markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDFA32081B8AC00498B14 /* github-markdown.css */; };
+		DD4BDFA62081B8CE00498B14 /* github-markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDFA52081B8C100498B14 /* github-markdown.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				DD1D01F72080D04D001D833C /* SwiftyJSON.framework in Embed Frameworks */,
+				DD4BDFA02081A99300498B14 /* Down.framework in Embed Frameworks */,
 				DD1D01F22080CCAF001D833C /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -141,6 +147,12 @@
 		DD37C81320805A8000834BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD37C81520805A8000834BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD37C81620805A8000834BFF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		DD4BDF9D2081A99300498B14 /* Down.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Down.framework.dSYM; path = Carthage/Build/iOS/Down.framework.dSYM; sourceTree = "<group>"; };
+		DD4BDF9E2081A99300498B14 /* Down.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Down.framework; path = Carthage/Build/iOS/Down.framework; sourceTree = "<group>"; };
+		DD4BDFA12081AF4900498B14 /* LevelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelController.swift; sourceTree = "<group>"; };
+		DD4BDFA32081B8AC00498B14 /* github-markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "github-markdown.css"; path = "../../../../Downloads/github-markdown.css"; sourceTree = "<group>"; };
+		DD4BDFA52081B8C100498B14 /* github-markdown.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "github-markdown.css"; sourceTree = "<group>"; };
+		DD4BDFA72081DFCB00498B14 /* CrypTools WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CrypTools WatchKit App.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD1D01F62080D04D001D833C /* SwiftyJSON.framework in Frameworks */,
+				DD4BDF9F2081A99300498B14 /* Down.framework in Frameworks */,
 				DD1D01F12080CCAF001D833C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +188,7 @@
 			children = (
 				DD37C7EC20805A7D00834BFF /* ViewController.swift */,
 				DD1D01E32080BEEC001D833C /* LevelCell.swift */,
+				DD4BDFA12081AF4900498B14 /* LevelController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,6 +196,7 @@
 		DD1D01C82080AE02001D833C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				DD4BDFA32081B8AC00498B14 /* github-markdown.css */,
 				DD1D01D12080AE12001D833C /* RobotoMono-Bold.ttf */,
 				DD1D01C92080AE10001D833C /* RobotoMono-BoldItalic.ttf */,
 				DD1D01CA2080AE11001D833C /* RobotoMono-Italic.ttf */,
@@ -200,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				DD1D01DE2080AF90001D833C /* NumberLabel.swift */,
+				DD4BDFA52081B8C100498B14 /* github-markdown.css */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -221,6 +237,8 @@
 				DD37C7E820805A7D00834BFF /* Products */,
 				DD1D01EF2080CCAF001D833C /* Alamofire.framework */,
 				DD1D01F02080CCAF001D833C /* Alamofire.framework.dSYM */,
+				DD4BDF9E2081A99300498B14 /* Down.framework */,
+				DD4BDF9D2081A99300498B14 /* Down.framework.dSYM */,
 				DD1D01F52080D04C001D833C /* SwiftyJSON.framework */,
 				DD1D01F42080D04C001D833C /* SwiftyJSON.framework.dSYM */,
 			);
@@ -256,6 +274,7 @@
 		DD37C7FD20805A7F00834BFF /* CrypTools WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				DD4BDFA72081DFCB00498B14 /* CrypTools WatchKit App.entitlements */,
 				DD37C7FE20805A7F00834BFF /* Interface.storyboard */,
 				DD37C80120805A7F00834BFF /* Assets.xcassets */,
 				DD37C80320805A7F00834BFF /* Info.plist */,
@@ -358,6 +377,11 @@
 					};
 					DD37C7F820805A7F00834BFF = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					DD37C80720805A7F00834BFF = {
 						CreatedOnToolsVersion = 9.3;
@@ -399,10 +423,12 @@
 				DD37C7F520805A7E00834BFF /* LaunchScreen.storyboard in Resources */,
 				DD1D01DB2080AE12001D833C /* RobotoMono-Bold.ttf in Resources */,
 				DD1D01D52080AE12001D833C /* RobotoMono-Medium.ttf in Resources */,
+				DD4BDFA62081B8CE00498B14 /* github-markdown.css in Resources */,
 				DD1D01D82080AE12001D833C /* RobotoMono-ThinItalic.ttf in Resources */,
 				DD37C7F220805A7E00834BFF /* Assets.xcassets in Resources */,
 				DD1D01DA2080AE12001D833C /* RobotoMono-Thin.ttf in Resources */,
 				DD1D01DC2080AE12001D833C /* RobotoMono-Light.ttf in Resources */,
+				DD4BDFA42081B8AC00498B14 /* github-markdown.css in Resources */,
 				DD37C7F020805A7D00834BFF /* Main.storyboard in Resources */,
 				DD1D01D32080AE12001D833C /* RobotoMono-BoldItalic.ttf in Resources */,
 				DD1D01D42080AE12001D833C /* RobotoMono-Italic.ttf in Resources */,
@@ -467,6 +493,7 @@
 				DD37C7ED20805A7D00834BFF /* ViewController.swift in Sources */,
 				DD1D01DF2080AF90001D833C /* NumberLabel.swift in Sources */,
 				DD1D01E42080BEEC001D833C /* LevelCell.swift in Sources */,
+				DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */,
 				DD37C7EB20805A7D00834BFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,6 +716,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "CrypTools WatchKit App/CrypTools WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TT6KKS6MS8;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -716,6 +744,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "CrypTools WatchKit App/CrypTools WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TT6KKS6MS8;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -757,7 +786,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -780,7 +809,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

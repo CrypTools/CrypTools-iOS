@@ -1,2 +1,3 @@
 github "Alamofire/Alamofire" "4.7.1"
 github "SwiftyJSON/SwiftyJSON" "4.0.0"
+github "iwasrobbed/Down" "v0.5.1"

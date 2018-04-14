@@ -1,26 +1,8 @@
 {
+  "commitish" : "4.7.1",
   "iOS" : [
     {
       "hash" : "148840f0dfd0b3e81fe0e1ac62e83cf6c9530380e09826254bc69150bcf7d380",
-      "name" : "Alamofire"
-    }
-  ],
-  "commitish" : "4.7.1",
-  "watchOS" : [
-    {
-      "hash" : "fd382fcb95e2ce35a9c15304c0f3e5dfa76619fb7991897cbab7f50502e9245e",
-      "name" : "Alamofire"
-    }
-  ],
-  "tvOS" : [
-    {
-      "hash" : "510bf724fb4868a396b49d1ee5ae27cf933e93034de170b02922ba43d806310a",
-      "name" : "Alamofire"
-    }
-  ],
-  "Mac" : [
-    {
-      "hash" : "12d01b6f3bf26a5416d11015b61089cf142d1853a940248741ef56bc1530acdd",
       "name" : "Alamofire"
     }
   ]
