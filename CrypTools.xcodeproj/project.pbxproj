@@ -24,6 +24,9 @@
 		DD1D01F22080CCAF001D833C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD1D01EF2080CCAF001D833C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD1D01F62080D04D001D833C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1D01F52080D04C001D833C /* SwiftyJSON.framework */; };
 		DD1D01F72080D04D001D833C /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD1D01F52080D04C001D833C /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DD2DD3AB20820E1E008951C1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2DD3AA20820E1E008951C1 /* NotificationService.swift */; };
+		DD2DD3B520820FBA008951C1 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD2DD3B420820FB9008951C1 /* OneSignal.framework */; };
+		DD2DD3B620820FBA008951C1 /* OneSignal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD2DD3B420820FB9008951C1 /* OneSignal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD37C7EB20805A7D00834BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C7EA20805A7D00834BFF /* AppDelegate.swift */; };
 		DD37C7ED20805A7D00834BFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C7EC20805A7D00834BFF /* ViewController.swift */; };
 		DD37C7F020805A7D00834BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD37C7EE20805A7D00834BFF /* Main.storyboard */; };
@@ -41,7 +44,7 @@
 		DD4BDFA02081A99300498B14 /* Down.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD4BDF9E2081A99300498B14 /* Down.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4BDFA12081AF4900498B14 /* LevelController.swift */; };
 		DD4BDFA42081B8AC00498B14 /* github-markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDFA32081B8AC00498B14 /* github-markdown.css */; };
-		DD4BDFA62081B8CE00498B14 /* github-markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDFA52081B8C100498B14 /* github-markdown.css */; };
+		DD4BDFA92082037B00498B14 /* Good Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4BDFA82082037B00498B14 /* Good Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,7 @@
 				DD1D01F72080D04D001D833C /* SwiftyJSON.framework in Embed Frameworks */,
 				DD4BDFA02081A99300498B14 /* Down.framework in Embed Frameworks */,
 				DD1D01F22080CCAF001D833C /* Alamofire.framework in Embed Frameworks */,
+				DD2DD3B620820FBA008951C1 /* OneSignal.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +133,10 @@
 		DD1D01F02080CCAF001D833C /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 		DD1D01F42080D04C001D833C /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyJSON.framework.dSYM; path = Carthage/Build/iOS/SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
 		DD1D01F52080D04C001D833C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		DD2DD3A820820E1E008951C1 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD2DD3AA20820E1E008951C1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		DD2DD3AC20820E1E008951C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD2DD3B420820FB9008951C1 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = Carthage/Build/iOS/OneSignal.framework; sourceTree = "<group>"; };
 		DD37C7E720805A7D00834BFF /* CrypTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrypTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD37C7EA20805A7D00834BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD37C7EC20805A7D00834BFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,12 +159,19 @@
 		DD4BDF9E2081A99300498B14 /* Down.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Down.framework; path = Carthage/Build/iOS/Down.framework; sourceTree = "<group>"; };
 		DD4BDFA12081AF4900498B14 /* LevelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelController.swift; sourceTree = "<group>"; };
 		DD4BDFA32081B8AC00498B14 /* github-markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "github-markdown.css"; path = "../../../../Downloads/github-markdown.css"; sourceTree = "<group>"; };
-		DD4BDFA52081B8C100498B14 /* github-markdown.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "github-markdown.css"; sourceTree = "<group>"; };
 		DD4BDFA72081DFCB00498B14 /* CrypTools WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CrypTools WatchKit App.entitlements"; sourceTree = "<group>"; };
+		DD4BDFA82082037B00498B14 /* Good Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Good Answer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DD1D01EC2080CB70001D833C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD2DD3A520820E1E008951C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -170,6 +185,7 @@
 				DD1D01F62080D04D001D833C /* SwiftyJSON.framework in Frameworks */,
 				DD4BDF9F2081A99300498B14 /* Down.framework in Frameworks */,
 				DD1D01F12080CCAF001D833C /* Alamofire.framework in Frameworks */,
+				DD2DD3B520820FBA008951C1 /* OneSignal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +205,7 @@
 				DD37C7EC20805A7D00834BFF /* ViewController.swift */,
 				DD1D01E32080BEEC001D833C /* LevelCell.swift */,
 				DD4BDFA12081AF4900498B14 /* LevelController.swift */,
+				DD4BDFA82082037B00498B14 /* Good Answer.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				DD1D01DE2080AF90001D833C /* NumberLabel.swift */,
-				DD4BDFA52081B8C100498B14 /* github-markdown.css */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -228,17 +244,28 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		DD2DD3A920820E1E008951C1 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DD2DD3AA20820E1E008951C1 /* NotificationService.swift */,
+				DD2DD3AC20820E1E008951C1 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		DD37C7DE20805A7D00834BFF = {
 			isa = PBXGroup;
 			children = (
 				DD37C7E920805A7D00834BFF /* CrypTools */,
 				DD37C7FD20805A7F00834BFF /* CrypTools WatchKit App */,
 				DD37C80C20805A7F00834BFF /* CrypTools WatchKit Extension */,
+				DD2DD3A920820E1E008951C1 /* OneSignalNotificationServiceExtension */,
 				DD37C7E820805A7D00834BFF /* Products */,
 				DD1D01EF2080CCAF001D833C /* Alamofire.framework */,
 				DD1D01F02080CCAF001D833C /* Alamofire.framework.dSYM */,
 				DD4BDF9E2081A99300498B14 /* Down.framework */,
 				DD4BDF9D2081A99300498B14 /* Down.framework.dSYM */,
+				DD2DD3B420820FB9008951C1 /* OneSignal.framework */,
 				DD1D01F52080D04C001D833C /* SwiftyJSON.framework */,
 				DD1D01F42080D04C001D833C /* SwiftyJSON.framework.dSYM */,
 			);
@@ -250,6 +277,7 @@
 				DD37C7E720805A7D00834BFF /* CrypTools.app */,
 				DD37C7F920805A7F00834BFF /* CrypTools WatchKit App.app */,
 				DD37C80820805A7F00834BFF /* CrypTools WatchKit Extension.appex */,
+				DD2DD3A820820E1E008951C1 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,6 +327,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DD2DD3A720820E1E008951C1 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD2DD3B220820E1E008951C1 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				DD2DD3A420820E1E008951C1 /* Sources */,
+				DD2DD3A520820E1E008951C1 /* Frameworks */,
+				DD2DD3A620820E1E008951C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = DD2DD3A820820E1E008951C1 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		DD37C7E620805A7D00834BFF /* CrypTools */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD37C82120805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools" */;
@@ -367,10 +412,16 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Arthur Guiot";
 				TargetAttributes = {
+					DD2DD3A720820E1E008951C1 = {
+						CreatedOnToolsVersion = 9.3;
+					};
 					DD37C7E620805A7D00834BFF = {
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 						};
@@ -409,11 +460,19 @@
 				DD37C7E620805A7D00834BFF /* CrypTools */,
 				DD37C7F820805A7F00834BFF /* CrypTools WatchKit App */,
 				DD37C80720805A7F00834BFF /* CrypTools WatchKit Extension */,
+				DD2DD3A720820E1E008951C1 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DD2DD3A620820E1E008951C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD37C7E520805A7D00834BFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,7 +482,6 @@
 				DD37C7F520805A7E00834BFF /* LaunchScreen.storyboard in Resources */,
 				DD1D01DB2080AE12001D833C /* RobotoMono-Bold.ttf in Resources */,
 				DD1D01D52080AE12001D833C /* RobotoMono-Medium.ttf in Resources */,
-				DD4BDFA62081B8CE00498B14 /* github-markdown.css in Resources */,
 				DD1D01D82080AE12001D833C /* RobotoMono-ThinItalic.ttf in Resources */,
 				DD37C7F220805A7E00834BFF /* Assets.xcassets in Resources */,
 				DD1D01DA2080AE12001D833C /* RobotoMono-Thin.ttf in Resources */,
@@ -485,6 +543,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DD2DD3A420820E1E008951C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD2DD3AB20820E1E008951C1 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD37C7E320805A7D00834BFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,6 +560,7 @@
 				DD1D01DF2080AF90001D833C /* NumberLabel.swift in Sources */,
 				DD1D01E42080BEEC001D833C /* LevelCell.swift in Sources */,
 				DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */,
+				DD4BDFA92082037B00498B14 /* Good Answer.swift in Sources */,
 				DD37C7EB20805A7D00834BFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +618,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DD2DD3B020820E1E008951C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD2DD3B120820E1E008951C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DD37C81720805A8000834BFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -816,6 +921,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD2DD3B220820E1E008951C1 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD2DD3B020820E1E008951C1 /* Debug */,
+				DD2DD3B120820E1E008951C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DD37C7E220805A7D00834BFF /* Build configuration list for PBXProject "CrypTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

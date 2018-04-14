@@ -12,9 +12,11 @@ class LevelCell: UITableViewCell {
 
 	@IBOutlet weak var LevelIndex: NumberLabel!
 	@IBOutlet weak var LevelName: NumberLabel!
+	@IBOutlet weak var Done: UIImageView!
 	
-	func renderLevelCell(fancy: String, index: Int) {
+	func renderLevelCell(fancy: String, index: Int, hidden: Bool) {
 		LevelIndex.text = "#\(index + 1)"
 		LevelName.text = fancy
+		Done.isHidden = hidden
 	}
 }

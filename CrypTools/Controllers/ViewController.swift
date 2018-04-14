@@ -9,8 +9,22 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import WatchConnectivity
 
-class ViewController: UIViewController, UITextFieldDelegate {
+
+class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
+	func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+		
+	}
+	
+	func sessionDidBecomeInactive(_ session: WCSession) {
+		
+	}
+	
+	func sessionDidDeactivate(_ session: WCSession) {
+		
+	}
+	
 	
 	@IBOutlet weak var TableView: UITableView!
 	@IBOutlet weak var Loading: UIActivityIndicatorView!
@@ -48,6 +62,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
 			defaults?.setValue([], forKey: "done")
 			defaults?.setValue(1, forKey: "levels")
 		}
+		
+		if WCSession.isSupported() { //makes sure it's not an iPad or iPod
+			let watchSession = WCSession.default
+			watchSession.delegate = self as WCSessionDelegate
+			watchSession.activate()
+			if watchSession.isPaired && watchSession.isWatchAppInstalled {
+				do {
+					try watchSession.updateApplicationContext([
+						"done": defaults?.array(forKey: "done") ?? [],
+						"levels": defaults?.integer(forKey: "levels") ?? 1
+						])
+				} catch let error as NSError {
+					print(error.description)
+				}
+			}
+		}
 	}
 	var levels: [Level] = []
 	func getLevels() {
@@ -75,6 +105,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 				let appGroupID = "group.com.arguiot.CrypTools"
 				let defaults = UserDefaults(suiteName: appGroupID)
 				defaults?.setValue(self.levels.count, forKey: "levels")
+				
+				self.defaults()
 			} catch {
 				print("JSON Parsing Error")
 			}
@@ -98,9 +130,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let level = levels[indexPath.row]
 		
+		let appGroupID = "group.com.arguiot.CrypTools"
+		let defaults = UserDefaults(suiteName: appGroupID)
+		
+		let done: [String] = defaults?.array(forKey: "done") as! [String]
+		let hidden = done.contains(where: { $0 == level.id })
+		
 		let cell = TableView.dequeueReusableCell(withIdentifier: "LevelCell") as! LevelCell
 		
-		cell.renderLevelCell(fancy: level.fancy, index: indexPath.row)
+		cell.renderLevelCell(fancy: level.fancy, index: indexPath.row, hidden: !hidden)
 		
 		return cell
 	}

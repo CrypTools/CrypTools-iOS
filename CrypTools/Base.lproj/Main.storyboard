@@ -89,15 +89,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Notif" translatesAutoresizingMaskIntoConstraints="NO" id="PP7-WX-rR6">
+                                                    <rect key="frame" x="283" y="49" width="20" height="20"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Uwh-0W-jde" firstAttribute="centerX" secondItem="9Nf-mk-a3M" secondAttribute="centerX" id="HwU-3h-QCF"/>
+                                                <constraint firstItem="PP7-WX-rR6" firstAttribute="top" secondItem="9Nf-mk-a3M" secondAttribute="topMargin" constant="38" id="Lca-f9-4FE"/>
                                                 <constraint firstItem="Uwh-0W-jde" firstAttribute="top" secondItem="9Nf-mk-a3M" secondAttribute="topMargin" constant="55" id="Lqv-qV-EIp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PP7-WX-rR6" secondAttribute="trailing" constant="57" id="brW-jb-iu2"/>
                                                 <constraint firstItem="cw1-Xz-lCV" firstAttribute="top" secondItem="Uwh-0W-jde" secondAttribute="bottom" constant="8" id="cJU-Of-Be5"/>
                                                 <constraint firstItem="cw1-Xz-lCV" firstAttribute="centerX" secondItem="9Nf-mk-a3M" secondAttribute="centerX" id="pWs-Tz-twz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="Done" destination="PP7-WX-rR6" id="u9c-vI-SJ2"/>
                                             <outlet property="LevelIndex" destination="Uwh-0W-jde" id="HWu-dc-Fk7"/>
                                             <outlet property="LevelName" destination="cw1-Xz-lCV" id="Myg-iV-k8S"/>
                                             <segue destination="Nc1-6N-F55" kind="presentation" identifier="GoTO" modalTransitionStyle="flipHorizontal" id="h6N-Bl-VXA"/>
@@ -154,7 +160,7 @@
         <scene sceneID="RaW-G8-zgA">
             <objects>
                 <viewController id="Nc1-6N-F55" customClass="LevelController" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4eC-Kg-6TR">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4eC-Kg-6TR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -222,7 +228,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" image="ic_chevron_left_white"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="fW4-7a-dVX">
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="BackLevel" modalTransitionStyle="flipHorizontal" id="fW4-7a-dVX">
                                         <segue key="commit" inheritsFrom="parent" id="i5t-kn-oS8"/>
                                         <segue key="preview" inheritsFrom="commit" id="bml-1H-ldB"/>
                                     </segue>
@@ -258,13 +264,19 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGt-eO-lK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="Alg-Ej-fOL">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="back:" destination="Nc1-6N-F55" id="Lbw-9M-9lS"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="888.79999999999995" y="122.78860569715144"/>
         </scene>
-        <!--View Controller-->
+        <!--Good Answer-->
         <scene sceneID="63k-30-Vv3">
             <objects>
-                <viewController id="BNo-EN-YSS" sceneMemberID="viewController">
+                <viewController id="BNo-EN-YSS" customClass="Good_Answer" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a6g-oD-Xow">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,11 +295,12 @@
                                 </constraints>
                                 <state key="normal" image="ic_arrow_back_48pt"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="v2X-ch-xZj"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="GoodAnswer" modalTransitionStyle="flipHorizontal" id="v2X-ch-xZj"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="W35-Ek-PGY" firstAttribute="centerX" secondItem="a6g-oD-Xow" secondAttribute="centerX" id="1xc-ko-UCQ"/>
                             <constraint firstItem="W35-Ek-PGY" firstAttribute="centerY" secondItem="a6g-oD-Xow" secondAttribute="centerY" id="ENI-yK-L7d"/>
@@ -295,9 +308,18 @@
                             <constraint firstItem="Yoi-j5-QEZ" firstAttribute="centerX" secondItem="a6g-oD-Xow" secondAttribute="centerX" id="UNl-3v-yHh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zAN-5D-GPq"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jxS-gT-bI0" appends="YES" id="IOk-YS-IHo"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUD-V6-NZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="jxS-gT-bI0">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="back:" destination="BNo-EN-YSS" id="sTc-Im-KlX"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1606" y="123"/>
         </scene>
@@ -305,10 +327,11 @@
     <resources>
         <image name="Item" width="300" height="300"/>
         <image name="Logo" width="1024" height="1024"/>
+        <image name="Rounded Notif" width="20" height="20"/>
         <image name="ic_arrow_back_48pt" width="48" height="48"/>
         <image name="ic_chevron_left_white" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="v2X-ch-xZj"/>
+        <segue reference="i5t-kn-oS8"/>
     </inferredMetricsTieBreakers>
 </document>
