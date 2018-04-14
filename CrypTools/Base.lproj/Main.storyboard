@@ -199,19 +199,6 @@
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l6u-XQ-Wkg">
-                                <rect key="frame" x="137.5" y="497" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="fAU-qY-0Zu"/>
-                                    <constraint firstAttribute="width" constant="100" id="tFS-r6-ErP"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="textChanged:" destination="Nc1-6N-F55" eventType="editingChanged" id="Yr4-pD-fia"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-04-avb">
                                 <rect key="frame" x="132" y="449" width="110" height="32"/>
                                 <constraints>
@@ -234,19 +221,32 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l6u-XQ-Wkg">
+                                <rect key="frame" x="112" y="489" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="NYS-zy-Bcg"/>
+                                    <constraint firstAttribute="height" constant="30" id="T2y-ix-UJR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="Nc1-6N-F55" eventType="editingChanged" id="Yr4-pD-fia"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="JWD-kL-ASE" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="1OZ-bo-Nnj"/>
+                            <constraint firstItem="SE8-04-avb" firstAttribute="top" secondItem="gIW-TE-JOQ" secondAttribute="bottom" constant="53" id="88F-Vc-YK3"/>
                             <constraint firstItem="SE8-04-avb" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="Ahr-fZ-8W4"/>
+                            <constraint firstItem="l6u-XQ-Wkg" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="GEl-8a-c8Q"/>
                             <constraint firstItem="a6I-ZZ-CKK" firstAttribute="top" secondItem="4eC-Kg-6TR" secondAttribute="top" id="J1z-kl-OuV"/>
-                            <constraint firstItem="l6u-XQ-Wkg" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="P41-6U-x4N"/>
                             <constraint firstItem="gIW-TE-JOQ" firstAttribute="top" secondItem="JWD-kL-ASE" secondAttribute="bottom" id="RWa-Pd-fPY"/>
+                            <constraint firstItem="l6u-XQ-Wkg" firstAttribute="top" secondItem="SE8-04-avb" secondAttribute="bottom" constant="8" id="RZz-y0-C85"/>
                             <constraint firstItem="ajN-FM-ZRY" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="TdK-a1-1VP"/>
-                            <constraint firstItem="mlI-hc-dl0" firstAttribute="bottom" secondItem="l6u-XQ-Wkg" secondAttribute="bottom" constant="140" id="V4R-eq-UTU"/>
                             <constraint firstItem="JWD-kL-ASE" firstAttribute="top" secondItem="4eC-Kg-6TR" secondAttribute="top" id="axr-BR-3sA"/>
-                            <constraint firstItem="l6u-XQ-Wkg" firstAttribute="top" secondItem="SE8-04-avb" secondAttribute="bottom" constant="16" id="cQO-jf-z6b"/>
                             <constraint firstItem="JWD-kL-ASE" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="eue-V6-koc"/>
                             <constraint firstItem="ajN-FM-ZRY" firstAttribute="top" secondItem="mlI-hc-dl0" secondAttribute="top" constant="10" id="grU-l8-Vcx"/>
                             <constraint firstItem="a6I-ZZ-CKK" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="gsh-IC-MuW"/>
