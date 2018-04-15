@@ -28,6 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 	
 	@IBOutlet weak var TableView: UITableView!
 	@IBOutlet weak var Loading: UIActivityIndicatorView!
+	@IBOutlet weak var LearnText: UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -36,6 +37,8 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 		self.levels = [] // Emptying levels to make sure that the app is reloading each levels
 		
 		UIApplication.shared.statusBarStyle = .lightContent
+		
+		LearnText.isHidden = true
 		
 		defaults()
 		
@@ -101,6 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 				self.TableView.endUpdates()
 				
 				self.Loading.isHidden = true
+				self.LearnText.isHidden = false
 				
 				let appGroupID = "group.com.arguiot.CrypTools"
 				let defaults = UserDefaults(suiteName: appGroupID)

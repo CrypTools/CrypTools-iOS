@@ -15,6 +15,9 @@
         <array key="RobotoMono-Bold.ttf">
             <string>RobotoMono-Bold</string>
         </array>
+        <array key="RobotoMono-Medium.ttf">
+            <string>RobotoMono-Medium</string>
+        </array>
         <array key="RobotoMono-Regular.ttf">
             <string>RobotoMono-Regular</string>
         </array>
@@ -60,12 +63,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Item" translatesAutoresizingMaskIntoConstraints="NO" id="Pfh-lN-Fv0">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Item" translatesAutoresizingMaskIntoConstraints="NO" id="Pfh-lN-Fv0">
                                                     <rect key="frame" x="0.0" y="11" width="375" height="289"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caesar Cipher" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw1-Xz-lCV" customClass="NumberLabel" customModule="CrypTools" customModuleProvider="target">
-                                                    <rect key="frame" x="77.5" y="179" width="220" height="74"/>
+                                                    <rect key="frame" x="78" y="179" width="220" height="74"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="220" id="gtQ-VG-INk"/>
                                                         <constraint firstAttribute="height" constant="74" id="pLx-5r-Mu9"/>
@@ -80,7 +82,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwh-0W-jde" customClass="NumberLabel" customModule="CrypTools" customModuleProvider="target">
-                                                    <rect key="frame" x="77.5" y="66" width="220" height="105"/>
+                                                    <rect key="frame" x="78" y="66" width="220" height="105"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="220" id="dJL-Qf-Rx7"/>
                                                         <constraint firstAttribute="height" constant="105" id="e60-jp-yja"/>
@@ -97,9 +99,13 @@
                                                 <constraint firstItem="Uwh-0W-jde" firstAttribute="centerX" secondItem="9Nf-mk-a3M" secondAttribute="centerX" id="HwU-3h-QCF"/>
                                                 <constraint firstItem="PP7-WX-rR6" firstAttribute="top" secondItem="9Nf-mk-a3M" secondAttribute="topMargin" constant="38" id="Lca-f9-4FE"/>
                                                 <constraint firstItem="Uwh-0W-jde" firstAttribute="top" secondItem="9Nf-mk-a3M" secondAttribute="topMargin" constant="55" id="Lqv-qV-EIp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Pfh-lN-Fv0" secondAttribute="bottom" constant="-11" id="Qie-GY-dok"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="PP7-WX-rR6" secondAttribute="trailing" constant="57" id="brW-jb-iu2"/>
                                                 <constraint firstItem="cw1-Xz-lCV" firstAttribute="top" secondItem="Uwh-0W-jde" secondAttribute="bottom" constant="8" id="cJU-Of-Be5"/>
+                                                <constraint firstItem="Pfh-lN-Fv0" firstAttribute="top" secondItem="9Nf-mk-a3M" secondAttribute="topMargin" id="mNa-dG-j38"/>
+                                                <constraint firstItem="Pfh-lN-Fv0" firstAttribute="leading" secondItem="9Nf-mk-a3M" secondAttribute="leading" id="oNl-BO-XBV"/>
                                                 <constraint firstItem="cw1-Xz-lCV" firstAttribute="centerX" secondItem="9Nf-mk-a3M" secondAttribute="centerX" id="pWs-Tz-twz"/>
+                                                <constraint firstItem="Pfh-lN-Fv0" firstAttribute="centerX" secondItem="cw1-Xz-lCV" secondAttribute="centerX" id="uh6-kd-txB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -125,6 +131,12 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Oxg-11-s8O">
                                 <rect key="frame" x="169" y="30" width="37" height="37"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/learn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-Ig-kOt">
+                                <rect key="frame" x="104" y="27" width="115.5" height="43"/>
+                                <fontDescription key="fontDescription" name="RobotoMono-Medium" family="Roboto Mono" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -138,16 +150,19 @@
                             <constraint firstItem="Oxg-11-s8O" firstAttribute="centerY" secondItem="m6M-AI-S1I" secondAttribute="centerY" id="EEp-hr-alo"/>
                             <constraint firstItem="JWT-oY-bjc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GEI-sO-0Lp"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="M00-00-XuV"/>
+                            <constraint firstItem="j9V-Ig-kOt" firstAttribute="centerY" secondItem="Oxg-11-s8O" secondAttribute="centerY" id="MDU-Am-pRp"/>
                             <constraint firstItem="JWT-oY-bjc" firstAttribute="top" secondItem="0fT-8Z-Ceg" secondAttribute="top" id="N2h-ok-JoR"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="bottom" secondItem="Uee-0j-aNJ" secondAttribute="bottom" id="OGV-pk-3gR"/>
                             <constraint firstItem="m6M-AI-S1I" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="24" id="QP2-64-N0h"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" id="aVH-2n-mDD"/>
+                            <constraint firstItem="j9V-Ig-kOt" firstAttribute="leading" secondItem="0fT-8Z-Ceg" secondAttribute="trailing" constant="8" symbolic="YES" id="iBX-XY-q2p"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="uYS-AB-F30"/>
                             <constraint firstItem="m6M-AI-S1I" firstAttribute="centerY" secondItem="0fT-8Z-Ceg" secondAttribute="centerY" id="wes-yq-KIQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
                     <connections>
+                        <outlet property="LearnText" destination="j9V-Ig-kOt" id="S7a-P3-SGP"/>
                         <outlet property="Loading" destination="Oxg-11-s8O" id="J8t-wA-Trr"/>
                         <outlet property="TableView" destination="Xhu-ad-oIj" id="2iC-KM-nC2"/>
                     </connections>
@@ -332,6 +347,6 @@
         <image name="ic_chevron_left_white" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="i5t-kn-oS8"/>
+        <segue reference="v2X-ch-xZj"/>
     </inferredMetricsTieBreakers>
 </document>
