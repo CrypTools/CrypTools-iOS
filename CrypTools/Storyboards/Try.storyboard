@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pvh-4I-rpE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoMono-Regular.ttf">
+            <string>RobotoMono-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="rj5-pw-HTE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="kZs-yk-s2a" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NQ4-cY-afJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKx-bW-nv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195" y="27"/>
+        </scene>
+        <!--Encrypt Controller-->
+        <scene sceneID="IP9-xz-U8u">
+            <objects>
+                <viewController id="Pvh-4I-rpE" customClass="EncryptController" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Drm-N0-m99">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAl-qG-gHJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                <color key="backgroundColor" white="0.30216877679999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="tO2-fW-4Db"/>
+                                    <constraint firstAttribute="height" constant="96" id="zm7-5m-0Pt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dql-SG-iJ6">
+                                <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="S0Z-ID-H9d"/>
+                                    <constraint firstAttribute="width" constant="96" id="ZEo-k9-mUk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" image="ic_chevron_left_white"/>
+                                <connections>
+                                    <segue destination="kZs-yk-s2a" kind="show" id="u56-sX-YPf"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Input Text" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nKR-7f-P6r">
+                                <rect key="frame" x="0.0" y="96" width="375" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="91M-T0-BtH">
+                                <rect key="frame" x="0.0" y="414" width="375" height="253"/>
+                                <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFx-cO-lYr">
+                                <rect key="frame" x="0.0" y="252" width="375" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="eFQ-7o-skC"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jFx-cO-lYr" firstAttribute="centerX" secondItem="Drm-N0-m99" secondAttribute="centerX" id="G1S-S4-EL2"/>
+                            <constraint firstItem="EAl-qG-gHJ" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="GVR-Iu-zlk"/>
+                            <constraint firstItem="EAl-qG-gHJ" firstAttribute="top" secondItem="Drm-N0-m99" secondAttribute="top" id="Iy5-TH-gyQ"/>
+                            <constraint firstItem="Dql-SG-iJ6" firstAttribute="top" secondItem="Drm-N0-m99" secondAttribute="top" id="KjN-dg-4mO"/>
+                            <constraint firstItem="EAl-qG-gHJ" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="LuK-9J-gtc"/>
+                            <constraint firstItem="jFx-cO-lYr" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="M9K-TB-OkZ"/>
+                            <constraint firstItem="91M-T0-BtH" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="Ogs-Ri-bF2"/>
+                            <constraint firstItem="91M-T0-BtH" firstAttribute="top" secondItem="jFx-cO-lYr" secondAttribute="bottom" id="UUe-a2-R6G"/>
+                            <constraint firstItem="jFx-cO-lYr" firstAttribute="centerY" secondItem="Drm-N0-m99" secondAttribute="centerY" id="Z7o-3S-rcw"/>
+                            <constraint firstItem="jFx-cO-lYr" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="bRj-Po-rrn"/>
+                            <constraint firstItem="Dql-SG-iJ6" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="luw-Op-Rqa"/>
+                            <constraint firstItem="91M-T0-BtH" firstAttribute="bottom" secondItem="SCc-3W-zvE" secondAttribute="bottom" id="mXv-ZL-PDk"/>
+                            <constraint firstItem="91M-T0-BtH" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="qeU-1Z-qK0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SCc-3W-zvE"/>
+                    </view>
+                    <connections>
+                        <outlet property="Input" destination="nKR-7f-P6r" id="Dre-ff-ADl"/>
+                        <outlet property="Output" destination="91M-T0-BtH" id="2PH-nU-9Tx"/>
+                        <outlet property="Picker" destination="jFx-cO-lYr" id="BVS-Zu-ivv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zxf-yd-5cL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="-381.85907046476763"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_chevron_left_white" width="48" height="48"/>
+    </resources>
+</document>

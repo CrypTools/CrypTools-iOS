@@ -27,6 +27,9 @@
 		DD2DD3AB20820E1E008951C1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2DD3AA20820E1E008951C1 /* NotificationService.swift */; };
 		DD2DD3B520820FBA008951C1 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD2DD3B420820FB9008951C1 /* OneSignal.framework */; };
 		DD2DD3B620820FBA008951C1 /* OneSignal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD2DD3B420820FB9008951C1 /* OneSignal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DD2DD3B920847F6E008951C1 /* Try.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD2DD3B820847F6E008951C1 /* Try.storyboard */; };
+		DD2DD3BB208482DC008951C1 /* EncryptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2DD3BA208482DC008951C1 /* EncryptController.swift */; };
+		DD2DD3BE2084862B008951C1 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2DD3BD2084862B008951C1 /* PickerView.swift */; };
 		DD37C7EB20805A7D00834BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C7EA20805A7D00834BFF /* AppDelegate.swift */; };
 		DD37C7ED20805A7D00834BFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C7EC20805A7D00834BFF /* ViewController.swift */; };
 		DD37C7F020805A7D00834BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD37C7EE20805A7D00834BFF /* Main.storyboard */; };
@@ -45,6 +48,16 @@
 		DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4BDFA12081AF4900498B14 /* LevelController.swift */; };
 		DD4BDFA42081B8AC00498B14 /* github-markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = DD4BDFA32081B8AC00498B14 /* github-markdown.css */; };
 		DD4BDFA92082037B00498B14 /* Good Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4BDFA82082037B00498B14 /* Good Answer.swift */; };
+		DD4F8F60208487B8007CB8AA /* Ciphers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F5F208487B8007CB8AA /* Ciphers.swift */; };
+		DD4F8F6B208488E8007CB8AA /* caesar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F62208488E8007CB8AA /* caesar.swift */; };
+		DD4F8F6C208488E8007CB8AA /* sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F63208488E8007CB8AA /* sha256.swift */; };
+		DD4F8F6D208488E8007CB8AA /* BitShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F64208488E8007CB8AA /* BitShift.swift */; };
+		DD4F8F6E208488E8007CB8AA /* md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F65208488E8007CB8AA /* md5.swift */; };
+		DD4F8F6F208488E8007CB8AA /* b64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F66208488E8007CB8AA /* b64.swift */; };
+		DD4F8F70208488E8007CB8AA /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F67208488E8007CB8AA /* Emoji.swift */; };
+		DD4F8F71208488E8007CB8AA /* XOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F68208488E8007CB8AA /* XOR.swift */; };
+		DD4F8F72208488E8007CB8AA /* ROT13.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F69208488E8007CB8AA /* ROT13.swift */; };
+		DD4F8F73208488E8007CB8AA /* Rail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F6A208488E8007CB8AA /* Rail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +150,9 @@
 		DD2DD3AA20820E1E008951C1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		DD2DD3AC20820E1E008951C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2DD3B420820FB9008951C1 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = Carthage/Build/iOS/OneSignal.framework; sourceTree = "<group>"; };
+		DD2DD3B820847F6E008951C1 /* Try.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Try.storyboard; sourceTree = "<group>"; };
+		DD2DD3BA208482DC008951C1 /* EncryptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptController.swift; sourceTree = "<group>"; };
+		DD2DD3BD2084862B008951C1 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		DD37C7E720805A7D00834BFF /* CrypTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrypTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD37C7EA20805A7D00834BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD37C7EC20805A7D00834BFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +177,16 @@
 		DD4BDFA32081B8AC00498B14 /* github-markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "github-markdown.css"; path = "../../../../Downloads/github-markdown.css"; sourceTree = "<group>"; };
 		DD4BDFA72081DFCB00498B14 /* CrypTools WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CrypTools WatchKit App.entitlements"; sourceTree = "<group>"; };
 		DD4BDFA82082037B00498B14 /* Good Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Good Answer.swift"; sourceTree = "<group>"; };
+		DD4F8F5F208487B8007CB8AA /* Ciphers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ciphers.swift; sourceTree = "<group>"; };
+		DD4F8F62208488E8007CB8AA /* caesar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = caesar.swift; sourceTree = "<group>"; };
+		DD4F8F63208488E8007CB8AA /* sha256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sha256.swift; sourceTree = "<group>"; };
+		DD4F8F64208488E8007CB8AA /* BitShift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitShift.swift; sourceTree = "<group>"; };
+		DD4F8F65208488E8007CB8AA /* md5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = md5.swift; sourceTree = "<group>"; };
+		DD4F8F66208488E8007CB8AA /* b64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = b64.swift; sourceTree = "<group>"; };
+		DD4F8F67208488E8007CB8AA /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		DD4F8F68208488E8007CB8AA /* XOR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XOR.swift; sourceTree = "<group>"; };
+		DD4F8F69208488E8007CB8AA /* ROT13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROT13.swift; sourceTree = "<group>"; };
+		DD4F8F6A208488E8007CB8AA /* Rail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +232,7 @@
 				DD1D01E32080BEEC001D833C /* LevelCell.swift */,
 				DD4BDFA12081AF4900498B14 /* LevelController.swift */,
 				DD4BDFA82082037B00498B14 /* Good Answer.swift */,
+				DD2DD3BA208482DC008951C1 /* EncryptController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				DD1D01E62080C70B001D833C /* Levels.swift */,
+				DD4F8F5F208487B8007CB8AA /* Ciphers.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -251,6 +279,24 @@
 				DD2DD3AC20820E1E008951C1 /* Info.plist */,
 			);
 			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		DD2DD3B720847F31008951C1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DD37C7EE20805A7D00834BFF /* Main.storyboard */,
+				DD37C7F320805A7E00834BFF /* LaunchScreen.storyboard */,
+				DD2DD3B820847F6E008951C1 /* Try.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DD2DD3BC20848618008951C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD2DD3BD2084862B008951C1 /* PickerView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DD37C7DE20805A7D00834BFF = {
@@ -285,15 +331,16 @@
 		DD37C7E920805A7D00834BFF /* CrypTools */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F8F61208488E8007CB8AA /* Ciphers */,
+				DD2DD3BC20848618008951C1 /* Extensions */,
+				DD2DD3B720847F31008951C1 /* Storyboards */,
 				DD1D01E52080C6FD001D833C /* Objects */,
 				DD1D01DD2080AF57001D833C /* Design */,
 				DD1D01C82080AE02001D833C /* Fonts */,
 				DD1D01C32080AB43001D833C /* Controllers */,
 				DD1D01C12080A65F001D833C /* CrypTools.entitlements */,
 				DD37C7EA20805A7D00834BFF /* AppDelegate.swift */,
-				DD37C7EE20805A7D00834BFF /* Main.storyboard */,
 				DD37C7F120805A7E00834BFF /* Assets.xcassets */,
-				DD37C7F320805A7E00834BFF /* LaunchScreen.storyboard */,
 				DD37C7F620805A7E00834BFF /* Info.plist */,
 			);
 			path = CrypTools;
@@ -322,6 +369,22 @@
 				DD37C81620805A8000834BFF /* PushNotificationPayload.apns */,
 			);
 			path = "CrypTools WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		DD4F8F61208488E8007CB8AA /* Ciphers */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F8F62208488E8007CB8AA /* caesar.swift */,
+				DD4F8F63208488E8007CB8AA /* sha256.swift */,
+				DD4F8F64208488E8007CB8AA /* BitShift.swift */,
+				DD4F8F65208488E8007CB8AA /* md5.swift */,
+				DD4F8F66208488E8007CB8AA /* b64.swift */,
+				DD4F8F67208488E8007CB8AA /* Emoji.swift */,
+				DD4F8F68208488E8007CB8AA /* XOR.swift */,
+				DD4F8F69208488E8007CB8AA /* ROT13.swift */,
+				DD4F8F6A208488E8007CB8AA /* Rail.swift */,
+			);
+			path = Ciphers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +554,7 @@
 				DD1D01D32080AE12001D833C /* RobotoMono-BoldItalic.ttf in Resources */,
 				DD1D01D42080AE12001D833C /* RobotoMono-Italic.ttf in Resources */,
 				DD1D01D72080AE12001D833C /* RobotoMono-LightItalic.ttf in Resources */,
+				DD2DD3B920847F6E008951C1 /* Try.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,9 +619,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4F8F73208488E8007CB8AA /* Rail.swift in Sources */,
+				DD4F8F71208488E8007CB8AA /* XOR.swift in Sources */,
+				DD4F8F6C208488E8007CB8AA /* sha256.swift in Sources */,
+				DD4F8F6B208488E8007CB8AA /* caesar.swift in Sources */,
+				DD4F8F6D208488E8007CB8AA /* BitShift.swift in Sources */,
 				DD1D01E72080C70B001D833C /* Levels.swift in Sources */,
+				DD4F8F72208488E8007CB8AA /* ROT13.swift in Sources */,
+				DD4F8F6F208488E8007CB8AA /* b64.swift in Sources */,
+				DD4F8F6E208488E8007CB8AA /* md5.swift in Sources */,
 				DD37C7ED20805A7D00834BFF /* ViewController.swift in Sources */,
+				DD2DD3BE2084862B008951C1 /* PickerView.swift in Sources */,
 				DD1D01DF2080AF90001D833C /* NumberLabel.swift in Sources */,
+				DD4F8F60208487B8007CB8AA /* Ciphers.swift in Sources */,
+				DD4F8F70208488E8007CB8AA /* Emoji.swift in Sources */,
+				DD2DD3BB208482DC008951C1 /* EncryptController.swift in Sources */,
 				DD1D01E42080BEEC001D833C /* LevelCell.swift in Sources */,
 				DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */,
 				DD4BDFA92082037B00498B14 /* Good Answer.swift in Sources */,

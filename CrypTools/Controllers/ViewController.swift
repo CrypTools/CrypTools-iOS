@@ -29,6 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 	@IBOutlet weak var TableView: UITableView!
 	@IBOutlet weak var Loading: UIActivityIndicatorView!
 	@IBOutlet weak var LearnText: UILabel!
+	@IBOutlet weak var NavBar: UINavigationItem!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -123,6 +124,12 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 			let LevelC = segue.destination as! LevelController
 			LevelC.level = self.levels[row]
 		}
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		
+		self.navigationController?.setNavigationBarHidden(false, animated: animated)
 	}
 }
 
