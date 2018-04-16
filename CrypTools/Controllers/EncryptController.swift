@@ -13,7 +13,8 @@ class EncryptController: UIViewController, UITextViewDelegate {
 	@IBOutlet weak var Input: UITextView!
 	@IBOutlet weak var Picker: UIPickerView!
 	@IBOutlet weak var Output: UITextView!
-    override func viewDidLoad() {
+	@IBOutlet weak var Key: UITextField!
+	override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -30,11 +31,21 @@ class EncryptController: UIViewController, UITextViewDelegate {
 	func textViewDidChange(_ textView: UITextView) {
 		render()
 	}
+	@IBAction func Render(_ sender: Any) {
+		render()
+	}
 	
 	var ciphers = Cipher()
-	var selected: String? = ""
+	var selected: String? = Cipher().name[0]
 	func render() {
-		
+		let fe = ciphers.get(self.selected)
+		var out = ""
+		do {
+			out = try fe(Input.text, Key.text ?? "")
+		} catch {
+			out = "Error!"
+		}
+		Output.text = out
 	}
     /*
     // MARK: - Navigation

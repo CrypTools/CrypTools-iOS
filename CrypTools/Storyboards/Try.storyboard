@@ -65,9 +65,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="91M-T0-BtH">
-                                <rect key="frame" x="0.0" y="414" width="375" height="253"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="91M-T0-BtH">
+                                <rect key="frame" x="0.0" y="422" width="375" height="245"/>
                                 <color key="backgroundColor" white="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -78,27 +79,43 @@
                                     <constraint firstAttribute="height" constant="162" id="eFQ-7o-skC"/>
                                 </constraints>
                             </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xAY-ab-9Z0">
+                                <rect key="frame" x="87" y="384" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1gn-cJ-UIX"/>
+                                    <constraint firstAttribute="height" constant="30" id="MsU-09-N5Y"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Render:" destination="Pvh-4I-rpE" eventType="editingChanged" id="nLM-FV-aBF"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="91M-T0-BtH" firstAttribute="top" secondItem="jFx-cO-lYr" secondAttribute="bottom" constant="8" id="4cv-i3-KsX"/>
+                            <constraint firstItem="91M-T0-BtH" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="CLg-pP-gD2"/>
                             <constraint firstItem="jFx-cO-lYr" firstAttribute="centerX" secondItem="Drm-N0-m99" secondAttribute="centerX" id="G1S-S4-EL2"/>
                             <constraint firstItem="EAl-qG-gHJ" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="GVR-Iu-zlk"/>
                             <constraint firstItem="EAl-qG-gHJ" firstAttribute="top" secondItem="Drm-N0-m99" secondAttribute="top" id="Iy5-TH-gyQ"/>
+                            <constraint firstItem="91M-T0-BtH" firstAttribute="top" secondItem="xAY-ab-9Z0" secondAttribute="bottom" constant="8" id="JQf-iB-8oG"/>
                             <constraint firstItem="Dql-SG-iJ6" firstAttribute="top" secondItem="Drm-N0-m99" secondAttribute="top" id="KjN-dg-4mO"/>
                             <constraint firstItem="EAl-qG-gHJ" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="LuK-9J-gtc"/>
                             <constraint firstItem="jFx-cO-lYr" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="M9K-TB-OkZ"/>
-                            <constraint firstItem="91M-T0-BtH" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="Ogs-Ri-bF2"/>
-                            <constraint firstItem="91M-T0-BtH" firstAttribute="top" secondItem="jFx-cO-lYr" secondAttribute="bottom" id="UUe-a2-R6G"/>
+                            <constraint firstItem="xAY-ab-9Z0" firstAttribute="centerX" secondItem="Drm-N0-m99" secondAttribute="centerX" id="Rtr-PS-mqw"/>
                             <constraint firstItem="jFx-cO-lYr" firstAttribute="centerY" secondItem="Drm-N0-m99" secondAttribute="centerY" id="Z7o-3S-rcw"/>
+                            <constraint firstItem="91M-T0-BtH" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="avs-wd-rvf"/>
                             <constraint firstItem="jFx-cO-lYr" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="bRj-Po-rrn"/>
                             <constraint firstItem="Dql-SG-iJ6" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="luw-Op-Rqa"/>
-                            <constraint firstItem="91M-T0-BtH" firstAttribute="bottom" secondItem="SCc-3W-zvE" secondAttribute="bottom" id="mXv-ZL-PDk"/>
-                            <constraint firstItem="91M-T0-BtH" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="qeU-1Z-qK0"/>
+                            <constraint firstItem="91M-T0-BtH" firstAttribute="bottom" secondItem="SCc-3W-zvE" secondAttribute="bottom" id="zFw-mS-u5S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SCc-3W-zvE"/>
                     </view>
                     <connections>
                         <outlet property="Input" destination="nKR-7f-P6r" id="Dre-ff-ADl"/>
+                        <outlet property="Key" destination="xAY-ab-9Z0" id="vLd-vK-2fZ"/>
                         <outlet property="Output" destination="91M-T0-BtH" id="2PH-nU-9Tx"/>
                         <outlet property="Picker" destination="jFx-cO-lYr" id="BVS-Zu-ivv"/>
                     </connections>

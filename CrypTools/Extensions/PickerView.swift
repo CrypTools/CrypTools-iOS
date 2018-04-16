@@ -22,5 +22,9 @@ extension EncryptController: UIPickerViewDelegate, UIPickerViewDataSource {
 	}
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		self.selected = self.ciphers.name[row]
+		
+		self.Input.text = ""
+		
+		self.render()
 	}
 }

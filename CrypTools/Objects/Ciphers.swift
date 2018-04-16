@@ -16,9 +16,9 @@ class Cipher {
 		self.name.append(name)
 		self.call.append(callback)
 	}
-	func get(_ name: String) -> f {
-		let i = self.name.index(of: name)
-		return call[i!] as! f
+	func get(_ name: String?) -> f {
+		let i = self.name.index(of: name ?? self.name[0])
+		return call[i ?? 0] as! f
 	}
 	init() {
 		self.add("Caesar - Encrypt", {
