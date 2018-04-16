@@ -14,6 +14,8 @@ class EncryptController: UIViewController, UITextViewDelegate {
 	@IBOutlet weak var Picker: UIPickerView!
 	@IBOutlet weak var Output: UITextView!
 	@IBOutlet weak var Key: UITextField!
+	@IBOutlet weak var Placeholder: UILabel!
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +32,11 @@ class EncryptController: UIViewController, UITextViewDelegate {
     }
 	func textViewDidChange(_ textView: UITextView) {
 		render()
+		if Input.text == "" {
+			Placeholder.isHidden = false
+		} else {
+			Placeholder.isHidden = true
+		}
 	}
 	@IBAction func Render(_ sender: Any) {
 		render()

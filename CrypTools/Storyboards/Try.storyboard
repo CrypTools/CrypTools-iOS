@@ -58,7 +58,7 @@
                                     <segue destination="kZs-yk-s2a" kind="show" id="u56-sX-YPf"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Input Text" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nKR-7f-P6r">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nKR-7f-P6r">
                                 <rect key="frame" x="0.0" y="96" width="375" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,6 +92,16 @@
                                     <action selector="Render:" destination="Pvh-4I-rpE" eventType="editingChanged" id="nLM-FV-aBF"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7X-RH-82t">
+                                <rect key="frame" x="149" y="104" width="76" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="n5X-vI-hOK"/>
+                                    <constraint firstAttribute="width" constant="76" id="zp0-SM-TGQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -99,6 +109,7 @@
                             <constraint firstItem="91M-T0-BtH" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="CLg-pP-gD2"/>
                             <constraint firstItem="jFx-cO-lYr" firstAttribute="centerX" secondItem="Drm-N0-m99" secondAttribute="centerX" id="G1S-S4-EL2"/>
                             <constraint firstItem="EAl-qG-gHJ" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="GVR-Iu-zlk"/>
+                            <constraint firstItem="F7X-RH-82t" firstAttribute="centerX" secondItem="Drm-N0-m99" secondAttribute="centerX" id="I82-D6-6a9"/>
                             <constraint firstItem="EAl-qG-gHJ" firstAttribute="top" secondItem="Drm-N0-m99" secondAttribute="top" id="Iy5-TH-gyQ"/>
                             <constraint firstItem="91M-T0-BtH" firstAttribute="top" secondItem="xAY-ab-9Z0" secondAttribute="bottom" constant="8" id="JQf-iB-8oG"/>
                             <constraint firstItem="Dql-SG-iJ6" firstAttribute="top" secondItem="Drm-N0-m99" secondAttribute="top" id="KjN-dg-4mO"/>
@@ -109,6 +120,7 @@
                             <constraint firstItem="91M-T0-BtH" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="avs-wd-rvf"/>
                             <constraint firstItem="jFx-cO-lYr" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="bRj-Po-rrn"/>
                             <constraint firstItem="Dql-SG-iJ6" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="luw-Op-Rqa"/>
+                            <constraint firstItem="F7X-RH-82t" firstAttribute="top" secondItem="EAl-qG-gHJ" secondAttribute="bottom" constant="8" id="oig-fV-19w"/>
                             <constraint firstItem="91M-T0-BtH" firstAttribute="bottom" secondItem="SCc-3W-zvE" secondAttribute="bottom" id="zFw-mS-u5S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SCc-3W-zvE"/>
@@ -118,6 +130,7 @@
                         <outlet property="Key" destination="xAY-ab-9Z0" id="vLd-vK-2fZ"/>
                         <outlet property="Output" destination="91M-T0-BtH" id="2PH-nU-9Tx"/>
                         <outlet property="Picker" destination="jFx-cO-lYr" id="BVS-Zu-ivv"/>
+                        <outlet property="Placeholder" destination="F7X-RH-82t" id="nQ1-6A-Znl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxf-yd-5cL" userLabel="First Responder" sceneMemberID="firstResponder"/>
