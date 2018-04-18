@@ -39,6 +39,9 @@ extension String {
         return r
     }
     func RailDecrypt(_ rows: Int = 3) -> String {
+		if self.count == 0 {
+			return ""
+		}
         var fence = [[String]]()
         for _ in 0...rows - 1 {
             fence.append(Array<String>())

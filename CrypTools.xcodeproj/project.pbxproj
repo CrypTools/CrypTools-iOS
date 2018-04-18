@@ -58,6 +58,8 @@
 		DD4F8F71208488E8007CB8AA /* XOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F68208488E8007CB8AA /* XOR.swift */; };
 		DD4F8F72208488E8007CB8AA /* ROT13.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F69208488E8007CB8AA /* ROT13.swift */; };
 		DD4F8F73208488E8007CB8AA /* Rail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F6A208488E8007CB8AA /* Rail.swift */; };
+		DD4F8F7520872A72007CB8AA /* binascii.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F7420872A72007CB8AA /* binascii.swift */; };
+		DD4F8F7720873E07007CB8AA /* HashShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F7620873E07007CB8AA /* HashShift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +189,8 @@
 		DD4F8F68208488E8007CB8AA /* XOR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XOR.swift; sourceTree = "<group>"; };
 		DD4F8F69208488E8007CB8AA /* ROT13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROT13.swift; sourceTree = "<group>"; };
 		DD4F8F6A208488E8007CB8AA /* Rail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rail.swift; sourceTree = "<group>"; };
+		DD4F8F7420872A72007CB8AA /* binascii.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = binascii.swift; sourceTree = "<group>"; };
+		DD4F8F7620873E07007CB8AA /* HashShift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashShift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +387,8 @@
 				DD4F8F68208488E8007CB8AA /* XOR.swift */,
 				DD4F8F69208488E8007CB8AA /* ROT13.swift */,
 				DD4F8F6A208488E8007CB8AA /* Rail.swift */,
+				DD4F8F7420872A72007CB8AA /* binascii.swift */,
+				DD4F8F7620873E07007CB8AA /* HashShift.swift */,
 			);
 			path = Ciphers;
 			sourceTree = "<group>";
@@ -634,9 +640,11 @@
 				DD4F8F60208487B8007CB8AA /* Ciphers.swift in Sources */,
 				DD4F8F70208488E8007CB8AA /* Emoji.swift in Sources */,
 				DD2DD3BB208482DC008951C1 /* EncryptController.swift in Sources */,
+				DD4F8F7520872A72007CB8AA /* binascii.swift in Sources */,
 				DD1D01E42080BEEC001D833C /* LevelCell.swift in Sources */,
 				DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */,
 				DD4BDFA92082037B00498B14 /* Good Answer.swift in Sources */,
+				DD4F8F7720873E07007CB8AA /* HashShift.swift in Sources */,
 				DD37C7EB20805A7D00834BFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

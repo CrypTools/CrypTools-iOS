@@ -73,4 +73,9 @@ class EncryptController: UIViewController, UITextViewDelegate {
 		view.endEditing(true)
 	}
 	
+	
+	@IBAction func Back(_ sender: Any) {
+		performSegue(withIdentifier: "EncryptBack", sender: sender)
+	}
+	
 }

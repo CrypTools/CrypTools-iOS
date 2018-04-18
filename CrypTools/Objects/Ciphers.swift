@@ -37,6 +37,14 @@ class Cipher {
 			text, key in
 			return text.b64decrypt!
 		})
+		self.add("BinASCII - Encrypt", {
+			text, key in
+			return text.BinEncrypt
+		})
+		self.add("BinASCII - Decrypt", {
+			text, key in
+			return text.BinDecrypt
+		})
 		self.add("BitShift - Encrypt", {
 			text, key in
 			return text.BitShiftEncrypt(key)
@@ -52,6 +60,14 @@ class Cipher {
 		self.add("Emoji - Decrypt", {
 			text, key in
 			return text.EmojiDecrypt
+		})
+		self.add("HashShift - Encrypt", {
+			text, key in
+			return text.HashShiftEncrypt(Int(key) ?? 0)
+		})
+		self.add("HashShift - Decrypt", {
+			text, key in
+			return text.HashShiftDecrypt(Int(key) ?? 0)
 		})
 		self.add("MD5", {
 			text, key in
