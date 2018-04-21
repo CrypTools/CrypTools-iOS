@@ -275,6 +275,17 @@
                                     <action selector="textChanged:" destination="Nc1-6N-F55" eventType="editingChanged" id="Yr4-pD-fia"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJO-X1-w9T">
+                                <rect key="frame" x="279" y="0.0" width="96" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="9Gv-WF-6Dh"/>
+                                    <constraint firstAttribute="height" constant="96" id="c9V-Ve-XZq"/>
+                                </constraints>
+                                <state key="normal" image="ic_share_white"/>
+                                <connections>
+                                    <action selector="share:" destination="Nc1-6N-F55" eventType="touchUpInside" id="sO5-JP-cCg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -283,6 +294,7 @@
                             <constraint firstItem="SE8-04-avb" firstAttribute="top" secondItem="gIW-TE-JOQ" secondAttribute="bottom" constant="53" id="88F-Vc-YK3"/>
                             <constraint firstItem="SE8-04-avb" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="Ahr-fZ-8W4"/>
                             <constraint firstItem="l6u-XQ-Wkg" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="GEl-8a-c8Q"/>
+                            <constraint firstItem="UJO-X1-w9T" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="IDM-Ly-K1E"/>
                             <constraint firstItem="a6I-ZZ-CKK" firstAttribute="top" secondItem="4eC-Kg-6TR" secondAttribute="top" id="J1z-kl-OuV"/>
                             <constraint firstItem="gIW-TE-JOQ" firstAttribute="top" secondItem="JWD-kL-ASE" secondAttribute="bottom" id="RWa-Pd-fPY"/>
                             <constraint firstItem="l6u-XQ-Wkg" firstAttribute="top" secondItem="SE8-04-avb" secondAttribute="bottom" constant="8" id="RZz-y0-C85"/>
@@ -293,6 +305,7 @@
                             <constraint firstItem="a6I-ZZ-CKK" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="gsh-IC-MuW"/>
                             <constraint firstItem="gIW-TE-JOQ" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="wcM-wx-pwA"/>
                             <constraint firstItem="gIW-TE-JOQ" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="wj4-re-LTU"/>
+                            <constraint firstItem="UJO-X1-w9T" firstAttribute="top" secondItem="4eC-Kg-6TR" secondAttribute="top" id="xqS-v7-4jH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mlI-hc-dl0"/>
                     </view>
@@ -329,10 +342,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoi-j5-QEZ">
-                                <rect key="frame" x="163" y="350" width="48" height="48"/>
+                                <rect key="frame" x="163" y="359" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="2oW-dR-Ibl"/>
-                                    <constraint firstAttribute="height" constant="48" id="cq5-tN-FIX"/>
+                                    <constraint firstAttribute="height" constant="48" id="bT1-VL-31Y"/>
+                                    <constraint firstAttribute="width" constant="48" id="pOl-uT-XUS"/>
                                 </constraints>
                                 <state key="normal" image="ic_arrow_back_48pt"/>
                                 <connections>
@@ -344,7 +357,6 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="zAN-5D-GPq" firstAttribute="trailing" secondItem="W35-Ek-PGY" secondAttribute="trailing" constant="15" id="MIe-QR-EZ7"/>
-                            <constraint firstItem="Yoi-j5-QEZ" firstAttribute="centerX" secondItem="a6g-oD-Xow" secondAttribute="centerX" id="UNl-3v-yHh"/>
                             <constraint firstItem="W35-Ek-PGY" firstAttribute="leading" secondItem="zAN-5D-GPq" secondAttribute="leading" constant="15" id="hbf-IP-jB9"/>
                             <constraint firstItem="W35-Ek-PGY" firstAttribute="centerY" secondItem="a6g-oD-Xow" secondAttribute="centerY" id="nUr-tI-1Aw"/>
                         </constraints>
@@ -371,6 +383,7 @@
         <image name="Rounded Notif" width="20" height="20"/>
         <image name="ic_arrow_back_48pt" width="48" height="48"/>
         <image name="ic_chevron_left_white" width="48" height="48"/>
+        <image name="ic_share_white" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="L5V-mi-pqL"/>

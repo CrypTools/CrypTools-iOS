@@ -118,6 +118,16 @@ class LevelController: UIViewController, WCSessionDelegate {
 			}
 		}
 	}
+	@IBAction func share(_ sender: UIButton) {
+		let url = NSURL(string: "https://cryptools.github.io/learn#\(level.id)")!
+		let toShare = [
+			url
+		]
+		let shareVC = UIActivityViewController(activityItems: toShare , applicationActivities: nil)
+		
+		shareVC.popoverPresentationController?.sourceView = sender
+		self.present(shareVC, animated: true, completion: nil)
+	}
 	/*
     // MARK: - Navigation
 
