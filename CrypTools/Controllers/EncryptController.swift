@@ -78,8 +78,20 @@ class EncryptController: UIViewController, UITextViewDelegate {
 	}
 	
 	
-	@IBAction func Back(_ sender: Any) {
+	@IBAction func Back(_ sender: UIButton) {
 		performSegue(withIdentifier: "EncryptBack", sender: sender)
 	}
 	
+	@IBAction func share(_ sender: UIButton) {
+		render()
+		
+		let text = Output.text!
+		let toShare = [
+			text
+		]
+		let shareVC = UIActivityViewController(activityItems: toShare , applicationActivities: nil)
+		
+		shareVC.popoverPresentationController?.sourceView = sender
+		self.present(shareVC, animated: true, completion: nil)
+	}
 }

@@ -100,10 +100,23 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhc-SM-zOO">
+                                <rect key="frame" x="279" y="0.0" width="96" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="82a-FL-hzY"/>
+                                    <constraint firstAttribute="height" constant="96" id="hEB-2Z-Aiz"/>
+                                </constraints>
+                                <state key="normal" image="ic_share_white"/>
+                                <connections>
+                                    <action selector="share:" destination="Pvh-4I-rpE" eventType="touchUpInside" id="L0H-AL-aOi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="dhc-SM-zOO" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="2dM-CG-p1J"/>
                             <constraint firstItem="91M-T0-BtH" firstAttribute="top" secondItem="jFx-cO-lYr" secondAttribute="bottom" constant="8" id="4cv-i3-KsX"/>
+                            <constraint firstItem="dhc-SM-zOO" firstAttribute="top" secondItem="Drm-N0-m99" secondAttribute="top" id="9Yp-sA-6jt"/>
                             <constraint firstItem="91M-T0-BtH" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="CLg-pP-gD2"/>
                             <constraint firstItem="jFx-cO-lYr" firstAttribute="centerX" secondItem="Drm-N0-m99" secondAttribute="centerX" id="G1S-S4-EL2"/>
                             <constraint firstItem="EAl-qG-gHJ" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="GVR-Iu-zlk"/>
@@ -147,5 +160,6 @@
     </scenes>
     <resources>
         <image name="ic_chevron_left_white" width="48" height="48"/>
+        <image name="ic_share_white" width="24" height="24"/>
     </resources>
 </document>
