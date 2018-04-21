@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		
+		// Google Analytics
+		GoogleReporter.shared.configure(withTrackerId: "UA-109503398-6")
+		
 		let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
 		
 		// Replace 'YOUR_APP_ID' with your OneSignal App ID.
@@ -46,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationDidEnterBackground(_ application: UIApplication) {
 		// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
 		// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+		GoogleReporter.shared.session(start: false)
 	}
 
 	func applicationWillEnterForeground(_ application: UIApplication) {
@@ -54,10 +58,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func applicationDidBecomeActive(_ application: UIApplication) {
 		// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+		GoogleReporter.shared.session(start: true)
 	}
 
 	func applicationWillTerminate(_ application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+		GoogleReporter.shared.session(start: false)
 	}
 
 

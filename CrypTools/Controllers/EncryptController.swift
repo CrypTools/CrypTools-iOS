@@ -20,6 +20,10 @@ class EncryptController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		
+		GoogleReporter.shared.screenView("Try")
+		
+		
 		Input.delegate = self //Without setting the delegate you won't be able to track UITextView events
 		Picker.delegate = self
 		

@@ -14,6 +14,7 @@ class Good_Answer: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		GoogleReporter.shared.screenView("Level - Done")
     }
 
     override func didReceiveMemoryWarning() {

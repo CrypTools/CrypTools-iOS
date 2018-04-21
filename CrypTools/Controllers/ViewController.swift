@@ -35,6 +35,8 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
+		GoogleReporter.shared.screenView("Main")
+		
 		self.levels = [] // Emptying levels to make sure that the app is reloading each levels
 		
 		UIApplication.shared.statusBarStyle = .lightContent
