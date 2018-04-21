@@ -2,7 +2,7 @@
   "commitish" : "2.8.2",
   "iOS" : [
     {
-      "hash" : "c22edecafa9107b702b266b0962b28b806d4dad6497d4f183e36344c6f45fc7f",
+      "hash" : "178fe48a47d2d444f46cce6aed9266ac12d2accd3c67374dd35192e6232d059e",
       "name" : "OneSignal"
     }
   ]

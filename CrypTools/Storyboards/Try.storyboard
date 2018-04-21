@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,9 +57,8 @@
                                     <segue destination="kZs-yk-s2a" kind="show" identifier="EncryptBack" id="u56-sX-YPf"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nKR-7f-P6r">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nKR-7f-P6r">
                                 <rect key="frame" x="0.0" y="96" width="375" height="157"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -117,10 +115,14 @@
                             <constraint firstItem="jFx-cO-lYr" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="M9K-TB-OkZ"/>
                             <constraint firstItem="xAY-ab-9Z0" firstAttribute="centerX" secondItem="Drm-N0-m99" secondAttribute="centerX" id="Rtr-PS-mqw"/>
                             <constraint firstItem="jFx-cO-lYr" firstAttribute="centerY" secondItem="Drm-N0-m99" secondAttribute="centerY" id="Z7o-3S-rcw"/>
+                            <constraint firstItem="nKR-7f-P6r" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="aAu-ql-6X4"/>
                             <constraint firstItem="91M-T0-BtH" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="avs-wd-rvf"/>
                             <constraint firstItem="jFx-cO-lYr" firstAttribute="trailing" secondItem="SCc-3W-zvE" secondAttribute="trailing" id="bRj-Po-rrn"/>
+                            <constraint firstItem="nKR-7f-P6r" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="fI5-WU-4ho"/>
                             <constraint firstItem="Dql-SG-iJ6" firstAttribute="leading" secondItem="SCc-3W-zvE" secondAttribute="leading" id="luw-Op-Rqa"/>
                             <constraint firstItem="F7X-RH-82t" firstAttribute="top" secondItem="EAl-qG-gHJ" secondAttribute="bottom" constant="8" id="oig-fV-19w"/>
+                            <constraint firstItem="xAY-ab-9Z0" firstAttribute="top" secondItem="nKR-7f-P6r" secondAttribute="bottom" constant="131" id="p0s-tM-zQQ"/>
+                            <constraint firstItem="nKR-7f-P6r" firstAttribute="top" secondItem="EAl-qG-gHJ" secondAttribute="bottom" id="wcG-if-Fki"/>
                             <constraint firstItem="91M-T0-BtH" firstAttribute="bottom" secondItem="SCc-3W-zvE" secondAttribute="bottom" id="zFw-mS-u5S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SCc-3W-zvE"/>

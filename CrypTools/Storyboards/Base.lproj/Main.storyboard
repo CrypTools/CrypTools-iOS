@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -53,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xhu-ad-oIj">
-                                <rect key="frame" x="0.0" y="97" width="375" height="570"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LevelCell" rowHeight="300" id="UjG-iX-7wy" customClass="LevelCell" customModule="CrypTools" customModuleProvider="target">
@@ -161,7 +160,6 @@
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" id="6a5-7t-Srp"/>
                             <constraint firstItem="Oxg-11-s8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="801-rm-DzC"/>
                             <constraint firstItem="JWT-oY-bjc" firstAttribute="leading" secondItem="Xhu-ad-oIj" secondAttribute="leading" id="8La-q9-ac9"/>
-                            <constraint firstItem="Xhu-ad-oIj" firstAttribute="top" secondItem="JWT-oY-bjc" secondAttribute="bottom" constant="1" id="CO4-XB-kGI"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="bottom" secondItem="Uee-0j-aNJ" secondAttribute="bottom" id="Dmb-1W-OpO"/>
                             <constraint firstItem="Oxg-11-s8O" firstAttribute="centerY" secondItem="m6M-AI-S1I" secondAttribute="centerY" id="EEp-hr-alo"/>
                             <constraint firstItem="JWT-oY-bjc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GEI-sO-0Lp"/>
@@ -175,6 +173,7 @@
                             <constraint firstItem="j9V-Ig-kOt" firstAttribute="leading" secondItem="0fT-8Z-Ceg" secondAttribute="trailing" constant="8" symbolic="YES" id="iBX-XY-q2p"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="uYS-AB-F30"/>
                             <constraint firstItem="m6M-AI-S1I" firstAttribute="centerY" secondItem="0fT-8Z-Ceg" secondAttribute="centerY" id="wes-yq-KIQ"/>
+                            <constraint firstItem="Xhu-ad-oIj" firstAttribute="top" secondItem="JWT-oY-bjc" secondAttribute="bottom" id="wgn-0H-VPG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
