@@ -19,14 +19,6 @@
 		DD37C7F020805A7D00834BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD37C7EE20805A7D00834BFF /* Main.storyboard */; };
 		DD37C7F220805A7E00834BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD37C7F120805A7E00834BFF /* Assets.xcassets */; };
 		DD37C7F520805A7E00834BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD37C7F320805A7E00834BFF /* LaunchScreen.storyboard */; };
-		DD37C7FA20805A7F00834BFF /* CrypTools WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DD37C7F920805A7F00834BFF /* CrypTools WatchKit App.app */; };
-		DD37C80020805A7F00834BFF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD37C7FE20805A7F00834BFF /* Interface.storyboard */; };
-		DD37C80220805A7F00834BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD37C80120805A7F00834BFF /* Assets.xcassets */; };
-		DD37C80920805A7F00834BFF /* CrypTools WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DD37C80820805A7F00834BFF /* CrypTools WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		DD37C80E20805A7F00834BFF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C80D20805A7F00834BFF /* InterfaceController.swift */; };
-		DD37C81020805A7F00834BFF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C80F20805A7F00834BFF /* ExtensionDelegate.swift */; };
-		DD37C81220805A7F00834BFF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD37C81120805A7F00834BFF /* NotificationController.swift */; };
-		DD37C81420805A8000834BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD37C81320805A8000834BFF /* Assets.xcassets */; };
 		DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4BDFA12081AF4900498B14 /* LevelController.swift */; };
 		DD4BDFA92082037B00498B14 /* Good Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4BDFA82082037B00498B14 /* Good Answer.swift */; };
 		DD4F8F60208487B8007CB8AA /* Ciphers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F5F208487B8007CB8AA /* Ciphers.swift */; };
@@ -61,52 +53,13 @@
 		DDE7D695208B213B001E4BFE /* OneSignal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDE7D693208B213B001E4BFE /* OneSignal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		DD37C7FB20805A7F00834BFF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DD37C7DF20805A7D00834BFF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DD37C7F820805A7F00834BFF;
-			remoteInfo = "CrypTools WatchKit App";
-		};
-		DD37C80A20805A7F00834BFF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DD37C7DF20805A7D00834BFF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DD37C80720805A7F00834BFF;
-			remoteInfo = "CrypTools WatchKit Extension";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		DD1D01ED2080CB70001D833C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD37C81C20805A8000834BFF /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				DD37C80920805A7F00834BFF /* CrypTools WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DD37C82020805A8000834BFF /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				DD37C7FA20805A7F00834BFF /* CrypTools WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,7 +82,6 @@
 
 /* Begin PBXFileReference section */
 		DD1D01C12080A65F001D833C /* CrypTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CrypTools.entitlements; sourceTree = "<group>"; };
-		DD1D01C22080A722001D833C /* CrypTools WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CrypTools WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		DD1D01DE2080AF90001D833C /* NumberLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLabel.swift; sourceTree = "<group>"; };
 		DD1D01E32080BEEC001D833C /* LevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCell.swift; sourceTree = "<group>"; };
 		DD1D01E62080C70B001D833C /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
@@ -146,19 +98,7 @@
 		DD37C7F120805A7E00834BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD37C7F420805A7E00834BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD37C7F620805A7E00834BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD37C7F920805A7F00834BFF /* CrypTools WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrypTools WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD37C7FF20805A7F00834BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		DD37C80120805A7F00834BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DD37C80320805A7F00834BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD37C80820805A7F00834BFF /* CrypTools WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CrypTools WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD37C80D20805A7F00834BFF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		DD37C80F20805A7F00834BFF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		DD37C81120805A7F00834BFF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		DD37C81320805A8000834BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DD37C81520805A8000834BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD37C81620805A8000834BFF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		DD4BDFA12081AF4900498B14 /* LevelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelController.swift; sourceTree = "<group>"; };
-		DD4BDFA72081DFCB00498B14 /* CrypTools WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CrypTools WatchKit App.entitlements"; sourceTree = "<group>"; };
 		DD4BDFA82082037B00498B14 /* Good Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Good Answer.swift"; sourceTree = "<group>"; };
 		DD4F8F5F208487B8007CB8AA /* Ciphers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ciphers.swift; sourceTree = "<group>"; };
 		DD4F8F62208488E8007CB8AA /* caesar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = caesar.swift; sourceTree = "<group>"; };
@@ -189,13 +129,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DD1D01EC2080CB70001D833C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DD2DD3A520820E1E008951C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,13 +144,6 @@
 				DDE7D691208B212C001E4BFE /* Alamofire.framework in Frameworks */,
 				DDE7D68A208B210D001E4BFE /* SwiftyJSON.framework in Frameworks */,
 				DDE7D694208B213B001E4BFE /* OneSignal.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD37C80520805A7F00834BFF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,8 +231,6 @@
 				DDE7D68D208B211C001E4BFE /* Down.framework */,
 				DDE7D689208B210D001E4BFE /* SwiftyJSON.framework */,
 				DD37C7E920805A7D00834BFF /* CrypTools */,
-				DD37C7FD20805A7F00834BFF /* CrypTools WatchKit App */,
-				DD37C80C20805A7F00834BFF /* CrypTools WatchKit Extension */,
 				DD2DD3A920820E1E008951C1 /* OneSignalNotificationServiceExtension */,
 				DD37C7E820805A7D00834BFF /* Products */,
 			);
@@ -316,8 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				DD37C7E720805A7D00834BFF /* CrypTools.app */,
-				DD37C7F920805A7F00834BFF /* CrypTools WatchKit App.app */,
-				DD37C80820805A7F00834BFF /* CrypTools WatchKit Extension.appex */,
 				DD2DD3A820820E1E008951C1 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
@@ -339,31 +261,6 @@
 				DD37C7F620805A7E00834BFF /* Info.plist */,
 			);
 			path = CrypTools;
-			sourceTree = "<group>";
-		};
-		DD37C7FD20805A7F00834BFF /* CrypTools WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				DD4BDFA72081DFCB00498B14 /* CrypTools WatchKit App.entitlements */,
-				DD37C7FE20805A7F00834BFF /* Interface.storyboard */,
-				DD37C80120805A7F00834BFF /* Assets.xcassets */,
-				DD37C80320805A7F00834BFF /* Info.plist */,
-			);
-			path = "CrypTools WatchKit App";
-			sourceTree = "<group>";
-		};
-		DD37C80C20805A7F00834BFF /* CrypTools WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				DD1D01C22080A722001D833C /* CrypTools WatchKit Extension.entitlements */,
-				DD37C80D20805A7F00834BFF /* InterfaceController.swift */,
-				DD37C80F20805A7F00834BFF /* ExtensionDelegate.swift */,
-				DD37C81120805A7F00834BFF /* NotificationController.swift */,
-				DD37C81320805A8000834BFF /* Assets.xcassets */,
-				DD37C81520805A8000834BFF /* Info.plist */,
-				DD37C81620805A8000834BFF /* PushNotificationPayload.apns */,
-			);
-			path = "CrypTools WatchKit Extension";
 			sourceTree = "<group>";
 		};
 		DD4F8F61208488E8007CB8AA /* Ciphers */ = {
@@ -418,49 +315,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				DD37C7FC20805A7F00834BFF /* PBXTargetDependency */,
 			);
 			name = CrypTools;
 			productName = CrypTools;
 			productReference = DD37C7E720805A7D00834BFF /* CrypTools.app */;
 			productType = "com.apple.product-type.application";
-		};
-		DD37C7F820805A7F00834BFF /* CrypTools WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD37C81D20805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools WatchKit App" */;
-			buildPhases = (
-				DD1D01E22080BACD001D833C /* ShellScript */,
-				DD37C7F720805A7F00834BFF /* Resources */,
-				DD37C81C20805A8000834BFF /* Embed App Extensions */,
-				DD1D01EC2080CB70001D833C /* Frameworks */,
-				DD1D01ED2080CB70001D833C /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DD37C80B20805A7F00834BFF /* PBXTargetDependency */,
-			);
-			name = "CrypTools WatchKit App";
-			productName = "CrypTools WatchKit App";
-			productReference = DD37C7F920805A7F00834BFF /* CrypTools WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		DD37C80720805A7F00834BFF /* CrypTools WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD37C81920805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools WatchKit Extension" */;
-			buildPhases = (
-				DD37C80420805A7F00834BFF /* Sources */,
-				DD37C80520805A7F00834BFF /* Frameworks */,
-				DD37C80620805A7F00834BFF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CrypTools WatchKit Extension";
-			productName = "CrypTools WatchKit Extension";
-			productReference = DD37C80820805A7F00834BFF /* CrypTools WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -486,22 +345,6 @@
 							};
 						};
 					};
-					DD37C7F820805A7F00834BFF = {
-						CreatedOnToolsVersion = 9.3;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					DD37C80720805A7F00834BFF = {
-						CreatedOnToolsVersion = 9.3;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
 				};
 			};
 			buildConfigurationList = DD37C7E220805A7D00834BFF /* Build configuration list for PBXProject "CrypTools" */;
@@ -518,8 +361,6 @@
 			projectRoot = "";
 			targets = (
 				DD37C7E620805A7D00834BFF /* CrypTools */,
-				DD37C7F820805A7F00834BFF /* CrypTools WatchKit App */,
-				DD37C80720805A7F00834BFF /* CrypTools WatchKit Extension */,
 				DD2DD3A720820E1E008951C1 /* OneSignalNotificationServiceExtension */,
 			);
 		};
@@ -554,40 +395,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD37C7F720805A7F00834BFF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD37C80220805A7F00834BFF /* Assets.xcassets in Resources */,
-				DD37C80020805A7F00834BFF /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD37C80620805A7F00834BFF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD37C81420805A8000834BFF /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		DD1D01C020806550001D833C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# xcode-build-bump.sh\n# @desc Auto-increment the build number every time the project is run.\n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Build Phases Tab\n# 3. Select: Add Build Phase -> Add Run Script\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Drag the \"Run Script\" below \"Link Binaries With Libraries\"\n# 6. Insure that your starting build number is set to a whole integer and not a float (e.g. 1, not 1.0)\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
-		};
-		DD1D01E22080BACD001D833C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -639,30 +450,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD37C80420805A7F00834BFF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD37C81220805A7F00834BFF /* NotificationController.swift in Sources */,
-				DD37C81020805A7F00834BFF /* ExtensionDelegate.swift in Sources */,
-				DD37C80E20805A7F00834BFF /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DD37C7FC20805A7F00834BFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DD37C7F820805A7F00834BFF /* CrypTools WatchKit App */;
-			targetProxy = DD37C7FB20805A7F00834BFF /* PBXContainerItemProxy */;
-		};
-		DD37C80B20805A7F00834BFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DD37C80720805A7F00834BFF /* CrypTools WatchKit Extension */;
-			targetProxy = DD37C80A20805A7F00834BFF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DD37C7EE20805A7D00834BFF /* Main.storyboard */ = {
@@ -679,14 +467,6 @@
 				DD37C7F420805A7E00834BFF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		DD37C7FE20805A7F00834BFF /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD37C7FF20805A7F00834BFF /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -781,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -835,114 +615,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		DD37C81A20805A8000834BFF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "CrypTools WatchKit Extension/CrypTools WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TT6KKS6MS8;
-				INFOPLIST_FILE = "CrypTools WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
-			};
-			name = Debug;
-		};
-		DD37C81B20805A8000834BFF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "CrypTools WatchKit Extension/CrypTools WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TT6KKS6MS8;
-				INFOPLIST_FILE = "CrypTools WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
-			};
-			name = Release;
-		};
-		DD37C81E20805A8000834BFF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "CrypTools WatchKit App/CrypTools WatchKit App.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TT6KKS6MS8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				IBSC_MODULE = CrypTools_WatchKit_Extension;
-				INFOPLIST_FILE = "CrypTools WatchKit App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
-			};
-			name = Debug;
-		};
-		DD37C81F20805A8000834BFF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "CrypTools WatchKit App/CrypTools WatchKit App.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TT6KKS6MS8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				IBSC_MODULE = CrypTools_WatchKit_Extension;
-				INFOPLIST_FILE = "CrypTools WatchKit App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};
@@ -1011,24 +689,6 @@
 			buildConfigurations = (
 				DD37C81720805A8000834BFF /* Debug */,
 				DD37C81820805A8000834BFF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DD37C81920805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD37C81A20805A8000834BFF /* Debug */,
-				DD37C81B20805A8000834BFF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DD37C81D20805A8000834BFF /* Build configuration list for PBXNativeTarget "CrypTools WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD37C81E20805A8000834BFF /* Debug */,
-				DD37C81F20805A8000834BFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
