@@ -85,7 +85,11 @@ class EncryptController: UIViewController, UITextViewDelegate {
 	@IBAction func share(_ sender: UIButton) {
 		render()
 		
-		let text = Output.text!
+		let text = """
+		---------- \(selected ?? ciphers.name[0]) ----------
+		\(Output.text!)
+		---------- \(Key.text ?? "No Key") ----------
+		"""
 		let toShare = [
 			text
 		]

@@ -26,12 +26,12 @@ extension Character {
 // Base 64
 extension String {
     
-    func fromBase64() -> String? {
+    func fromBase64() -> String {
         guard let data = Data(base64Encoded: self) else {
-            return nil
+            return ""
         }
         
-        return String(data: data, encoding: .utf8)
+		return String(data: data, encoding: .utf8)!
     }
     
     func toBase64() -> String {
@@ -57,8 +57,9 @@ extension String {
     }
     func BitShiftDecrypt(_ keyValue: String) -> String {
         let toString = self.fromBase64()
+
         let chars = CharacterSet(charactersIn: ",][ ")
-        let encoded = toString!.components(separatedBy: chars).filter {$0 != ""}.compactMap { UInt32($0)}
+		let encoded = toString.components(separatedBy: chars).filter {$0 != ""}.compactMap { UInt32($0)}
         var keyEncoded = keyValue.asciiArray
         
         let array = encoded.map({

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoMono-Regular.ttf">
+            <string>RobotoMono-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="iMessage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ecd-Bq-L1G">
+                                <rect key="frame" x="16" y="20" width="288" height="488"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A52-66-zL9">
+                                <rect key="frame" x="85" y="239" width="150" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5Rb-eR-t6N"/>
+                                    <constraint firstAttribute="height" constant="50" id="Vgx-2s-JiU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="20"/>
+                                <state key="normal" title="Decrypt">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Decrypt:" destination="ObA-dk-sSI" eventType="touchUpInside" id="rvB-eR-Stw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy a message and click on the button below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouu-Dv-P0n">
+                                <rect key="frame" x="57" y="131" width="206" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="OyG-3q-puX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5f-ry-7Pe">
+                                <rect key="frame" x="136" y="460" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="570-yt-8fG"/>
+                                    <constraint firstAttribute="height" constant="48" id="cR0-rs-q4L"/>
+                                </constraints>
+                                <state key="normal" image="ic_arrow_back_white_48pt"/>
+                                <connections>
+                                    <action selector="BackButtonAction:" destination="ObA-dk-sSI" eventType="touchUpInside" id="cpe-Uk-FCp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ecd-Bq-L1G" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="3tx-ZQ-nvZ"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="ecd-Bq-L1G" secondAttribute="bottom" constant="20" id="4Ed-aP-Kjn"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="ouu-Dv-P0n" secondAttribute="trailing" constant="57" id="Aif-nW-rex"/>
+                            <constraint firstItem="A52-66-zL9" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="KVP-Qp-nA6"/>
+                            <constraint firstItem="ecd-Bq-L1G" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" id="NZn-EE-xLh"/>
+                            <constraint firstItem="A52-66-zL9" firstAttribute="top" secondItem="ouu-Dv-P0n" secondAttribute="bottom" constant="8" id="QIr-6D-shI"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="ecd-Bq-L1G" secondAttribute="trailing" constant="16" id="R6f-fH-TeL"/>
+                            <constraint firstItem="ecd-Bq-L1G" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="RJh-Qc-MqV"/>
+                            <constraint firstItem="ouu-Dv-P0n" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="Ras-FE-hb4"/>
+                            <constraint firstItem="A52-66-zL9" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="fOC-kY-eQ9"/>
+                            <constraint firstItem="ouu-Dv-P0n" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="57" id="flU-rz-n5Z"/>
+                            <constraint firstItem="ecd-Bq-L1G" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="16" id="gEL-pY-gyr"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="u5f-ry-7Pe" secondAttribute="bottom" constant="20" id="u3j-Js-DpB"/>
+                            <constraint firstItem="u5f-ry-7Pe" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="zco-8i-Pbv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2Kt-CN-eau" appends="YES" id="pvt-Sd-JJM"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="BackButton" destination="u5f-ry-7Pe" id="tVW-mP-5Ai"/>
+                        <outlet property="Button" destination="A52-66-zL9" id="kmA-dp-HkL"/>
+                        <outlet property="TextView" destination="ecd-Bq-L1G" id="6IQ-Ut-UG3"/>
+                        <outlet property="Tutorial" destination="ouu-Dv-P0n" id="Iqg-et-Bst"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="2Kt-CN-eau">
+                    <connections>
+                        <action selector="Back:" destination="ObA-dk-sSI" id="iIe-V0-kdf"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="116.8" y="118.74062968515743"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_arrow_back_white_48pt" width="48" height="48"/>
+    </resources>
+</document>

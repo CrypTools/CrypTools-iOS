@@ -33,6 +33,7 @@
 		DD4F8F73208488E8007CB8AA /* Rail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F6A208488E8007CB8AA /* Rail.swift */; };
 		DD4F8F7520872A72007CB8AA /* binascii.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F7420872A72007CB8AA /* binascii.swift */; };
 		DD4F8F7720873E07007CB8AA /* HashShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F7620873E07007CB8AA /* HashShift.swift */; };
+		DDD2FC93208B8E2800B2487E /* Ciphers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F5F208487B8007CB8AA /* Ciphers.swift */; };
 		DDE7D67F208B1F65001E4BFE /* RobotoMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D675208B1F64001E4BFE /* RobotoMono-BoldItalic.ttf */; };
 		DDE7D680208B1F65001E4BFE /* RobotoMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D676208B1F64001E4BFE /* RobotoMono-Italic.ttf */; };
 		DDE7D681208B1F65001E4BFE /* RobotoMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D677208B1F64001E4BFE /* RobotoMono-Medium.ttf */; };
@@ -52,7 +53,34 @@
 		DDE7D694208B213B001E4BFE /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE7D693208B213B001E4BFE /* OneSignal.framework */; };
 		DDE7D695208B213B001E4BFE /* OneSignal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDE7D693208B213B001E4BFE /* OneSignal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DDE7D697208B257A001E4BFE /* GoogleReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7D696208B257A001E4BFE /* GoogleReporter.swift */; };
+		DDE7D69F208B65AB001E4BFE /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE7D69E208B65AB001E4BFE /* Messages.framework */; };
+		DDE7D6A2208B65AB001E4BFE /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7D6A1208B65AB001E4BFE /* MessagesViewController.swift */; };
+		DDE7D6A5208B65AB001E4BFE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D6A3208B65AB001E4BFE /* MainInterface.storyboard */; };
+		DDE7D6A7208B65AD001E4BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D6A6208B65AD001E4BFE /* Assets.xcassets */; };
+		DDE7D6AB208B65AD001E4BFE /* iMessage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DDE7D69C208B65AB001E4BFE /* iMessage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DDE7D6B0208B66F3001E4BFE /* caesar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F62208488E8007CB8AA /* caesar.swift */; };
+		DDE7D6B1208B66F3001E4BFE /* sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F63208488E8007CB8AA /* sha256.swift */; };
+		DDE7D6B2208B66F3001E4BFE /* BitShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F64208488E8007CB8AA /* BitShift.swift */; };
+		DDE7D6B3208B66F3001E4BFE /* md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F65208488E8007CB8AA /* md5.swift */; };
+		DDE7D6B4208B66F3001E4BFE /* b64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F66208488E8007CB8AA /* b64.swift */; };
+		DDE7D6B5208B66F3001E4BFE /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F67208488E8007CB8AA /* Emoji.swift */; };
+		DDE7D6B6208B66F3001E4BFE /* XOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F68208488E8007CB8AA /* XOR.swift */; };
+		DDE7D6B7208B66F3001E4BFE /* ROT13.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F69208488E8007CB8AA /* ROT13.swift */; };
+		DDE7D6B8208B66F3001E4BFE /* Rail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F6A208488E8007CB8AA /* Rail.swift */; };
+		DDE7D6B9208B66F3001E4BFE /* binascii.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F7420872A72007CB8AA /* binascii.swift */; };
+		DDE7D6BA208B66F3001E4BFE /* HashShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F7620873E07007CB8AA /* HashShift.swift */; };
+		DDE7D6BC208B693F001E4BFE /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7D6BB208B693F001E4BFE /* Parser.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDE7D6A9208B65AD001E4BFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD37C7DF20805A7D00834BFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDE7D69B208B65AB001E4BFE;
+			remoteInfo = iMessage;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DD37C82020805A8000834BFF /* Embed Watch Content */ = {
@@ -77,6 +105,17 @@
 				DDE7D695208B213B001E4BFE /* OneSignal.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE7D6AF208B65AD001E4BFE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DDE7D6AB208B65AD001E4BFE /* iMessage.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -128,6 +167,13 @@
 		DDE7D690208B212C001E4BFE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DDE7D693208B213B001E4BFE /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = Carthage/Build/iOS/OneSignal.framework; sourceTree = "<group>"; };
 		DDE7D696208B257A001E4BFE /* GoogleReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleReporter.swift; sourceTree = "<group>"; };
+		DDE7D69C208B65AB001E4BFE /* iMessage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE7D69E208B65AB001E4BFE /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		DDE7D6A1208B65AB001E4BFE /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		DDE7D6A4208B65AB001E4BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		DDE7D6A6208B65AD001E4BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDE7D6A8208B65AD001E4BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDE7D6BB208B693F001E4BFE /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +192,14 @@
 				DDE7D691208B212C001E4BFE /* Alamofire.framework in Frameworks */,
 				DDE7D68A208B210D001E4BFE /* SwiftyJSON.framework in Frameworks */,
 				DDE7D694208B213B001E4BFE /* OneSignal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE7D699208B65AB001E4BFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE7D69F208B65AB001E4BFE /* Messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +284,9 @@
 			isa = PBXGroup;
 			children = (
 				DD37C7E920805A7D00834BFF /* CrypTools */,
+				DDE7D6A0208B65AB001E4BFE /* iMessage */,
 				DD2DD3A920820E1E008951C1 /* OneSignalNotificationServiceExtension */,
+				DDE7D69D208B65AB001E4BFE /* Frameworks */,
 				DD37C7E820805A7D00834BFF /* Products */,
 				DDE7D693208B213B001E4BFE /* OneSignal.framework */,
 				DDE7D690208B212C001E4BFE /* Alamofire.framework */,
@@ -244,6 +300,7 @@
 			children = (
 				DD37C7E720805A7D00834BFF /* CrypTools.app */,
 				DD2DD3A820820E1E008951C1 /* OneSignalNotificationServiceExtension.appex */,
+				DDE7D69C208B65AB001E4BFE /* iMessage.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,6 +341,26 @@
 			path = Ciphers;
 			sourceTree = "<group>";
 		};
+		DDE7D69D208B65AB001E4BFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7D69E208B65AB001E4BFE /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDE7D6A0208B65AB001E4BFE /* iMessage */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7D6A1208B65AB001E4BFE /* MessagesViewController.swift */,
+				DDE7D6A3208B65AB001E4BFE /* MainInterface.storyboard */,
+				DDE7D6A6208B65AD001E4BFE /* Assets.xcassets */,
+				DDE7D6A8208B65AD001E4BFE /* Info.plist */,
+				DDE7D6BB208B693F001E4BFE /* Parser.swift */,
+			);
+			path = iMessage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,15 +391,34 @@
 				DD37C7E520805A7D00834BFF /* Resources */,
 				DD37C82020805A8000834BFF /* Embed Watch Content */,
 				DDE7D68C208B210D001E4BFE /* Embed Frameworks */,
+				DDE7D6AF208B65AD001E4BFE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DDE7D6AA208B65AD001E4BFE /* PBXTargetDependency */,
 			);
 			name = CrypTools;
 			productName = CrypTools;
 			productReference = DD37C7E720805A7D00834BFF /* CrypTools.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DDE7D69B208B65AB001E4BFE /* iMessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDE7D6AC208B65AD001E4BFE /* Build configuration list for PBXNativeTarget "iMessage" */;
+			buildPhases = (
+				DDE7D698208B65AB001E4BFE /* Sources */,
+				DDE7D699208B65AB001E4BFE /* Frameworks */,
+				DDE7D69A208B65AB001E4BFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iMessage;
+			productName = iMessage;
+			productReference = DDE7D69C208B65AB001E4BFE /* iMessage.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
 		};
 /* End PBXNativeTarget section */
 
@@ -348,6 +444,9 @@
 							};
 						};
 					};
+					DDE7D69B208B65AB001E4BFE = {
+						CreatedOnToolsVersion = 9.3;
+					};
 				};
 			};
 			buildConfigurationList = DD37C7E220805A7D00834BFF /* Build configuration list for PBXProject "CrypTools" */;
@@ -365,6 +464,7 @@
 			targets = (
 				DD37C7E620805A7D00834BFF /* CrypTools */,
 				DD2DD3A720820E1E008951C1 /* OneSignalNotificationServiceExtension */,
+				DDE7D69B208B65AB001E4BFE /* iMessage */,
 			);
 		};
 /* End PBXProject section */
@@ -395,6 +495,15 @@
 				DDE7D680208B1F65001E4BFE /* RobotoMono-Italic.ttf in Resources */,
 				DDE7D685208B1F65001E4BFE /* RobotoMono-Regular.ttf in Resources */,
 				DDE7D67F208B1F65001E4BFE /* RobotoMono-BoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE7D69A208B65AB001E4BFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE7D6A7208B65AD001E4BFE /* Assets.xcassets in Resources */,
+				DDE7D6A5208B65AB001E4BFE /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +563,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DDE7D698208B65AB001E4BFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE7D6B1208B66F3001E4BFE /* sha256.swift in Sources */,
+				DDE7D6B0208B66F3001E4BFE /* caesar.swift in Sources */,
+				DDE7D6B2208B66F3001E4BFE /* BitShift.swift in Sources */,
+				DDE7D6B8208B66F3001E4BFE /* Rail.swift in Sources */,
+				DDE7D6BC208B693F001E4BFE /* Parser.swift in Sources */,
+				DDE7D6BA208B66F3001E4BFE /* HashShift.swift in Sources */,
+				DDE7D6B9208B66F3001E4BFE /* binascii.swift in Sources */,
+				DDE7D6B3208B66F3001E4BFE /* md5.swift in Sources */,
+				DDE7D6B5208B66F3001E4BFE /* Emoji.swift in Sources */,
+				DDE7D6B7208B66F3001E4BFE /* ROT13.swift in Sources */,
+				DDD2FC93208B8E2800B2487E /* Ciphers.swift in Sources */,
+				DDE7D6B6208B66F3001E4BFE /* XOR.swift in Sources */,
+				DDE7D6B4208B66F3001E4BFE /* b64.swift in Sources */,
+				DDE7D6A2208B65AB001E4BFE /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDE7D6AA208B65AD001E4BFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDE7D69B208B65AB001E4BFE /* iMessage */;
+			targetProxy = DDE7D6A9208B65AD001E4BFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DD37C7EE20805A7D00834BFF /* Main.storyboard */ = {
@@ -471,6 +609,14 @@
 				DD37C7F420805A7E00834BFF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DDE7D6A3208B65AB001E4BFE /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDE7D6A4208B65AB001E4BFE /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -631,6 +777,7 @@
 		DD37C82220805A8000834BFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CrypTools/CrypTools.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -655,6 +802,7 @@
 		DD37C82320805A8000834BFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CrypTools/CrypTools.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -673,6 +821,48 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		DDE7D6AD208B65AD001E4BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				INFOPLIST_FILE = iMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.iMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDE7D6AE208B65AD001E4BFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				INFOPLIST_FILE = iMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools.iMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -702,6 +892,15 @@
 			buildConfigurations = (
 				DD37C82220805A8000834BFF /* Debug */,
 				DD37C82320805A8000834BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDE7D6AC208B65AD001E4BFE /* Build configuration list for PBXNativeTarget "iMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDE7D6AD208B65AD001E4BFE /* Debug */,
+				DDE7D6AE208B65AD001E4BFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
