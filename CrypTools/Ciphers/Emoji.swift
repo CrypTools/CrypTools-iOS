@@ -47,7 +47,12 @@ extension String {
                              "Z" ]
         var out = ""
         for i in self.uppercased() {
-            out += emojis[lettersArray.index(of: String(i)) ?? 0]
+			let index = lettersArray.index(of: String(i))
+			if index == nil {
+				out += String(i)
+			} else {
+				out += emojis[index!]
+			}
         }
         return out
     }
@@ -81,7 +86,12 @@ extension String {
                              "Z" ]
         var out = ""
         for i in self.uppercased() {
-            out += lettersArray[emojis.index(of: String(i)) ?? 0]
+			let index = emojis.index(of: String(i))
+			if index == nil {
+				out += String(i)
+			} else {
+				out += lettersArray[index!]
+			}
         }
         return out
     }
