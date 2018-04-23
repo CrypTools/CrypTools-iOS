@@ -151,9 +151,21 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="7fM-re-Kkg" customClass="ProgressBar" customModule="CrypTools" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="664" width="375" height="4"/>
+                                <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="czT-3m-7fa"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" white="0.90242702280465115" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7fM-re-Kkg" secondAttribute="trailing" id="1q6-xk-1rc"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="bottom" secondItem="7fM-re-Kkg" secondAttribute="bottom" id="2e2-1V-65y"/>
                             <constraint firstItem="JWT-oY-bjc" firstAttribute="trailing" secondItem="Xhu-ad-oIj" secondAttribute="trailing" id="3x8-za-J5y"/>
                             <constraint firstItem="JWT-oY-bjc" firstAttribute="leading" secondItem="0fT-8Z-Ceg" secondAttribute="leading" id="4Nv-QH-X4B"/>
                             <constraint firstItem="UhD-8n-KMT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5NL-WY-5oW"/>
@@ -171,6 +183,7 @@
                             <constraint firstItem="UhD-8n-KMT" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="W4K-P3-25c"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" id="aVH-2n-mDD"/>
                             <constraint firstItem="j9V-Ig-kOt" firstAttribute="leading" secondItem="0fT-8Z-Ceg" secondAttribute="trailing" constant="8" symbolic="YES" id="iBX-XY-q2p"/>
+                            <constraint firstItem="7fM-re-Kkg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kqy-fM-wWJ"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="uYS-AB-F30"/>
                             <constraint firstItem="m6M-AI-S1I" firstAttribute="centerY" secondItem="0fT-8Z-Ceg" secondAttribute="centerY" id="wes-yq-KIQ"/>
                             <constraint firstItem="Xhu-ad-oIj" firstAttribute="top" secondItem="JWT-oY-bjc" secondAttribute="bottom" id="wgn-0H-VPG"/>
@@ -183,6 +196,7 @@
                         <outlet property="Loading" destination="Oxg-11-s8O" id="J8t-wA-Trr"/>
                         <outlet property="NavBar" destination="nua-ZU-0IP" id="tlo-OP-b96"/>
                         <outlet property="TableView" destination="Xhu-ad-oIj" id="2iC-KM-nC2"/>
+                        <outlet property="progressBar" destination="7fM-re-Kkg" id="M5N-MI-vrs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -341,11 +355,11 @@
                                 <color key="textColor" red="0.0" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoi-j5-QEZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoi-j5-QEZ">
                                 <rect key="frame" x="163" y="359" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="bT1-VL-31Y"/>
-                                    <constraint firstAttribute="width" constant="48" id="pOl-uT-XUS"/>
+                                    <constraint firstAttribute="height" constant="48" id="C9I-ZB-jHv"/>
+                                    <constraint firstAttribute="width" constant="48" id="MSb-0E-nrK"/>
                                 </constraints>
                                 <state key="normal" image="ic_arrow_back_48pt"/>
                                 <connections>
@@ -356,9 +370,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Yoi-j5-QEZ" firstAttribute="centerX" secondItem="a6g-oD-Xow" secondAttribute="centerX" id="5za-de-smA"/>
                             <constraint firstItem="zAN-5D-GPq" firstAttribute="trailing" secondItem="W35-Ek-PGY" secondAttribute="trailing" constant="15" id="MIe-QR-EZ7"/>
                             <constraint firstItem="W35-Ek-PGY" firstAttribute="leading" secondItem="zAN-5D-GPq" secondAttribute="leading" constant="15" id="hbf-IP-jB9"/>
                             <constraint firstItem="W35-Ek-PGY" firstAttribute="centerY" secondItem="a6g-oD-Xow" secondAttribute="centerY" id="nUr-tI-1Aw"/>
+                            <constraint firstItem="Yoi-j5-QEZ" firstAttribute="top" secondItem="W35-Ek-PGY" secondAttribute="bottom" constant="8" id="qEH-sR-VhN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zAN-5D-GPq"/>
                         <connections>

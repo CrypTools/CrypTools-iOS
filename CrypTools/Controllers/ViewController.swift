@@ -30,6 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 	@IBOutlet weak var Loading: UIActivityIndicatorView!
 	@IBOutlet weak var LearnText: UILabel!
 	@IBOutlet weak var NavBar: UINavigationItem!
+	@IBOutlet weak var progressBar: ProgressBar!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -52,6 +53,8 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 		TableView.separatorStyle = .none
 		
 		getLevels()
+		
+		updateProgress()
 	}
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -84,6 +87,8 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 				}
 			}
 		}
+		
+		
 	}
 	var levels: [Level] = []
 	func getLevels() {
@@ -120,6 +125,17 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 		}
 	}
 	
+	func updateProgress() {
+		let appGroupID = "group.com.arguiot.CrypTools"
+		let defaults = UserDefaults(suiteName: appGroupID)
+		
+		let nDone = Float((defaults?.array(forKey: "done")?.count)!)
+		let nLevels = Float((defaults?.integer(forKey: "levels"))!)
+		
+		let progress = nDone / nLevels
+		progressBar.Animate(duration: 1.5, value: progress)
+		
+	}
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let path = TableView.indexPathForSelectedRow {
 			let row = path.row

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0A74D6208DFD61008B0D9A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A74D5208DFD61008B0D9A /* ProgressBar.swift */; };
 		DD1D01DF2080AF90001D833C /* NumberLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D01DE2080AF90001D833C /* NumberLabel.swift */; };
 		DD1D01E42080BEEC001D833C /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D01E32080BEEC001D833C /* LevelCell.swift */; };
 		DD1D01E72080C70B001D833C /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D01E62080C70B001D833C /* Levels.swift */; };
@@ -121,6 +122,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD0A74D5208DFD61008B0D9A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		DD1D01C12080A65F001D833C /* CrypTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CrypTools.entitlements; sourceTree = "<group>"; };
 		DD1D01DE2080AF90001D833C /* NumberLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLabel.swift; sourceTree = "<group>"; };
 		DD1D01E32080BEEC001D833C /* LevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCell.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				DD1D01DE2080AF90001D833C /* NumberLabel.swift */,
+				DD0A74D5208DFD61008B0D9A /* ProgressBar.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				DD1D01E72080C70B001D833C /* Levels.swift in Sources */,
 				DD4F8F72208488E8007CB8AA /* ROT13.swift in Sources */,
 				DD4F8F6F208488E8007CB8AA /* b64.swift in Sources */,
+				DD0A74D6208DFD61008B0D9A /* ProgressBar.swift in Sources */,
 				DD4F8F6E208488E8007CB8AA /* md5.swift in Sources */,
 				DD37C7ED20805A7D00834BFF /* ViewController.swift in Sources */,
 				DD2DD3BE2084862B008951C1 /* PickerView.swift in Sources */,
