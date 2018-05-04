@@ -95,6 +95,13 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 		let location = "https://cryptools.github.io/learn/api/challenges.json"
 		Alamofire.request(location).responseJSON {
 			response in
+			if (response.error != nil) {
+				Zingle.init(duration: 0.5, delay: 2)
+					.message(message: "No internet connection!")
+					.messageColor(color: .white)
+					.backgroundColor(color: UIColor(red:0.16, green:0.16, blue:0.16, alpha:1.0))
+					.show()
+			}
 			do {
 				let json = try JSON(data: response.data!)
 				let noob = json["challenges"]["noob"]

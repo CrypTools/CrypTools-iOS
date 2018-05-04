@@ -34,6 +34,7 @@
 		DD4F8F73208488E8007CB8AA /* Rail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F6A208488E8007CB8AA /* Rail.swift */; };
 		DD4F8F7520872A72007CB8AA /* binascii.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F7420872A72007CB8AA /* binascii.swift */; };
 		DD4F8F7720873E07007CB8AA /* HashShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F7620873E07007CB8AA /* HashShift.swift */; };
+		DD7FC4A5209C8FD40037B0B6 /* Zingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7FC4A4209C8FD40037B0B6 /* Zingle.swift */; };
 		DDD2FC93208B8E2800B2487E /* Ciphers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F8F5F208487B8007CB8AA /* Ciphers.swift */; };
 		DDE7D67F208B1F65001E4BFE /* RobotoMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D675208B1F64001E4BFE /* RobotoMono-BoldItalic.ttf */; };
 		DDE7D680208B1F65001E4BFE /* RobotoMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D676208B1F64001E4BFE /* RobotoMono-Italic.ttf */; };
@@ -154,6 +155,7 @@
 		DD4F8F6A208488E8007CB8AA /* Rail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rail.swift; sourceTree = "<group>"; };
 		DD4F8F7420872A72007CB8AA /* binascii.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = binascii.swift; sourceTree = "<group>"; };
 		DD4F8F7620873E07007CB8AA /* HashShift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashShift.swift; sourceTree = "<group>"; };
+		DD7FC4A4209C8FD40037B0B6 /* Zingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zingle.swift; sourceTree = "<group>"; };
 		DDE7D675208B1F64001E4BFE /* RobotoMono-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-BoldItalic.ttf"; sourceTree = "<group>"; };
 		DDE7D676208B1F64001E4BFE /* RobotoMono-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Italic.ttf"; sourceTree = "<group>"; };
 		DDE7D677208B1F64001E4BFE /* RobotoMono-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Medium.ttf"; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			children = (
 				DD2DD3BD2084862B008951C1 /* PickerView.swift */,
 				DDE7D696208B257A001E4BFE /* GoogleReporter.swift */,
+				DD7FC4A4209C8FD40037B0B6 /* Zingle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				DD1D01E72080C70B001D833C /* Levels.swift in Sources */,
 				DD4F8F72208488E8007CB8AA /* ROT13.swift in Sources */,
 				DD4F8F6F208488E8007CB8AA /* b64.swift in Sources */,
+				DD7FC4A5209C8FD40037B0B6 /* Zingle.swift in Sources */,
 				DD0A74D6208DFD61008B0D9A /* ProgressBar.swift in Sources */,
 				DD4F8F6E208488E8007CB8AA /* md5.swift in Sources */,
 				DD37C7ED20805A7D00834BFF /* ViewController.swift in Sources */,

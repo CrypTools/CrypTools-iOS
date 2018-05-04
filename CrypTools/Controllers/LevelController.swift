@@ -50,6 +50,13 @@ class LevelController: UIViewController, WCSessionDelegate {
 	func renderMarkDown() {
 		Alamofire.request(self.level.questionURL).response {
 			response in
+			if (response.error != nil) {
+				Zingle.init(duration: 0.5, delay: 2)
+					.message(message: "No internet connection!")
+					.messageColor(color: .white)
+					.backgroundColor(color: UIColor(red:0.16, green:0.16, blue:0.16, alpha:1.0))
+					.show()
+			}
 			let markdown = String(data: response.data!, encoding: .utf8)
 			let down = Down(markdownString: markdown!)
 			let html = try? down.toAttributedString()
