@@ -1,4 +1,4 @@
 github "Alamofire/Alamofire" "4.7.2"
-github "OneSignal/OneSignal-iOS-SDK" "2.8.2"
+github "OneSignal/OneSignal-iOS-SDK" "2.8.5"
 github "SwiftyJSON/SwiftyJSON" "4.1.0"
-github "iwasrobbed/Down" "v0.5.1"
+github "iwasrobbed/Down" "v0.5.2"

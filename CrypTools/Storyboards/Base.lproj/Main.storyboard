@@ -143,7 +143,7 @@
                                     <constraint firstAttribute="height" constant="96" id="F8O-xf-XNL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoMono-Bold" family="Roboto Mono" pointSize="17"/>
-                                <state key="normal" title="Try"/>
+                                <state key="normal" title="Ciphers"/>
                                 <connections>
                                     <segue destination="b9Q-Zr-SSh" kind="presentation" modalTransitionStyle="coverVertical" id="L5V-mi-pqL">
                                         <segue key="commit" inheritsFrom="parent" id="SoU-9S-J8A"/>

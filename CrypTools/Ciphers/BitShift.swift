@@ -23,21 +23,6 @@ extension Character {
         return String(self).unicodeScalars.filter{$0.isASCII}.first?.value
     }
 }
-// Base 64
-extension String {
-    
-    func fromBase64() -> String {
-        guard let data = Data(base64Encoded: self) else {
-            return ""
-        }
-        
-		return String(data: data, encoding: .utf8)!
-    }
-    
-    func toBase64() -> String {
-        return Data(self.utf8).base64EncodedString()
-    }
-}
 
 extension String {
     func BitShiftEncrypt(_ keyValue: String) -> String {
@@ -53,24 +38,23 @@ extension String {
             keyEncoded = keyEncoded.reversed()
             return y;
         })
-        return array.description.toBase64()
+        return array.description.b64encrypt
     }
     func BitShiftDecrypt(_ keyValue: String) -> String {
-        let toString = self.fromBase64()
+        let toString = self.b64decrypt
 
         let chars = CharacterSet(charactersIn: ",][ ")
-		let encoded = toString.components(separatedBy: chars).filter {$0 != ""}.compactMap { UInt32($0)}
+        let encoded = toString?.components(separatedBy: chars).filter {$0 != ""}.compactMap { UInt32($0)}
         var keyEncoded = keyValue.asciiArray
-        
-        let array = encoded.map({
-            x -> (UInt32) in
+        var array = [UInt32]()
+        for i in encoded! {
             keyEncoded = keyEncoded.reversed()
-            var y = x
+            var y = UInt32(i)
             for i in keyEncoded {
                 y = (y - 1) >> (i % 8)
             }
-            return y;
-        })
+            array.append(y)
+        }
         var output = "";
         for i in array {
             output += String(UnicodeScalar(UInt8(i)))

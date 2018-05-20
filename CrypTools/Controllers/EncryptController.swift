@@ -51,11 +51,7 @@ class EncryptController: UIViewController, UITextViewDelegate {
 	func render() {
 		let fe = ciphers.get(self.selected)
 		var out = ""
-		do {
-			out = try fe(Input.text, Key.text ?? "")
-		} catch {
-			out = "Error!"
-		}
+        out = fe(Input.text, Key.text ?? "")
 		Output.text = out
 	}
     /*

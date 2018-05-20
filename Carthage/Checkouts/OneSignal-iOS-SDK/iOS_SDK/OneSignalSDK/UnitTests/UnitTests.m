@@ -79,6 +79,12 @@
 #import "OneSignalClientOverrider.h"
 #import "OneSignalCommonDefines.h"
 
+#import "DummyNotificationCenterDelegate.h"
+
+@interface OneSignalHelper (TestHelper)
++ (NSString*)downloadMediaAndSaveInBundle:(NSString*)urlString;
+@end
+
 
 @interface UnitTests : XCTestCase
 
@@ -1244,12 +1250,38 @@
     UNUserNotificationCenter *notifCenter = [UNUserNotificationCenter currentNotificationCenter];
     let notifCenterDelegate = notifCenter.delegate;
     
+    UIApplicationOverrider.currentUIApplicationState = UIApplicationStateInactive;
+    
     //iOS 10 calls UNUserNotificationCenterDelegate method directly when a notification is received while the app is in focus.
     [notifCenterDelegate userNotificationCenter:notifCenter
                         willPresentNotification:[notifResponse notification]
                           withCompletionHandler:^(UNNotificationPresentationOptions options) {}];
     
+    [UnitTestCommonMethods runBackgroundThreads];
+    
     XCTAssertEqual(recievedWasFire, true);
+}
+
+/*
+    There was a bug where receiving notifications would cause OSRequestSubmitNotificationOpened
+    to fire, even though the notification had not been opened
+*/
+- (void)testReceiveNotificationDoesNotSubmitOpenedRequest {
+    [OneSignalClientOverrider reset:self];
+    
+    let newFormat = @{@"aps": @{@"content_available": @1},
+                      @"os_data": @{
+                              @"i": @"b2f7f966-d8cc-11e4-bed1-df8f05be55ba",
+                              @"buttons": @{
+                                      @"m": @"alert body only",
+                                      @"o": @[@{@"i": @"id1", @"n": @"text1"}]
+                                      }
+                              }
+                      };
+    
+    [self receivedCallbackWithButtonsWithUserInfo:newFormat];
+    
+    XCTAssertFalse([OneSignalClientOverrider hasExecutedRequestOfType:[OSRequestSubmitNotificationOpened class]]);
 }
 
 - (void)testReceivedCallbackWithButtonsWithNewFormat {
@@ -1809,6 +1841,170 @@ didReceiveRemoteNotification:userInfo
     [UnitTestCommonMethods runBackgroundThreads];
     
     XCTAssertTrue(observer->last.to.subscribed);
+}
+
+// Checks to make sure that media URL's will not fail the extension-type check if they have query parameters
+- (void)testHandlingMediaUrlExtensions {
+    let testUrl = @"https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100";
+    
+    let cacheName = [OneSignalHelper downloadMediaAndSaveInBundle:testUrl];
+    
+    XCTAssertNotNil(cacheName);
+}
+
+/*
+    Tests the privacy functionality to comply with the GDPR
+*/
+- (void)testPrivacyState {
+    [NSBundleOverrider setPrivacyState:true];
+    
+    [self assertUserConsent];
+    
+    [NSBundleOverrider setPrivacyState:false];
+}
+
+- (void)testOverridePrivacyState {
+    //since some wrapper SDK's wont use an info.plist, the SDK also provides a method that can also set the privacy consent setting
+    
+    [OneSignal setRequiresUserPrivacyConsent:true];
+    
+    [self assertUserConsent];
+    
+    [OneSignal setRequiresUserPrivacyConsent:false];
+}
+
+- (void)assertUserConsent {
+    [OneSignal initWithLaunchOptions:nil appId:@"b2f7f966-d8cc-11e4-bed1-df8f05be55ba"
+            handleNotificationAction:nil
+                            settings:@{kOSSettingsKeyAutoPrompt: @false}];
+    
+    //indicates initialization was delayed
+    XCTAssertNil(OneSignal.app_id);
+    
+    XCTAssertTrue([OneSignal requiresUserPrivacyConsent]);
+    
+    let latestHttpRequest = OneSignalClientOverrider.lastUrl;
+    
+    [OneSignal sendTags:@{@"test" : @"test"}];
+    
+    //if lastUrl is null, isEqualToString: will return false, so perform an equality check as well
+    XCTAssertTrue([OneSignalClientOverrider.lastUrl isEqualToString:latestHttpRequest] || latestHttpRequest == OneSignalClientOverrider.lastUrl);
+    
+    [OneSignal consentGranted:true];
+    
+    XCTAssertTrue([@"b2f7f966-d8cc-11e4-bed1-df8f05be55ba" isEqualToString:OneSignal.app_id]);
+    
+    XCTAssertFalse([OneSignal requiresUserPrivacyConsent]);
+}
+
+//since apps may manually request push permission while OneSignal privacy consent is not granted,
+//the SDK should not do anything with this token while permission is pending
+//checks to make sure that, for example, OneSignal does not register the push token with the backend
+- (void)testPushNotificationToken {
+    [NSBundleOverrider setPrivacyState:true];
+    
+    [UnitTestCommonMethods setCurrentNotificationPermissionAsUnanswered];
+    [OneSignal initWithLaunchOptions:nil appId:@"b2f7f966-d8cc-11e4-bed1-df8f05be55ba"
+            handleNotificationAction:nil
+                            settings:@{kOSSettingsKeyAutoPrompt: @false}];
+    
+    OSSubscriptionStateTestObserver* observer = [OSSubscriptionStateTestObserver new];
+    [OneSignal addSubscriptionObserver:observer];
+    
+    // Triggers the 30 fallback to register device right away.
+    [UnitTestCommonMethods runBackgroundThreads];
+    [NSObjectOverrider runPendingSelectors];
+    [UnitTestCommonMethods runBackgroundThreads];
+    
+    XCTAssertNil(observer->last.from.userId);
+    XCTAssertNil(observer->last.to.userId);
+    XCTAssertFalse(observer->last.to.subscribed);
+    
+    [OneSignal setSubscription:true];
+    [UnitTestCommonMethods runBackgroundThreads];
+    
+    XCTAssertFalse(observer->last.from.userSubscriptionSetting);
+    XCTAssertFalse(observer->last.to.userSubscriptionSetting);
+    // Device registered with OneSignal so now make pushToken available.
+    XCTAssertNil(observer->last.to.pushToken);
+    
+    [NSBundleOverrider setPrivacyState:false];
+}
+  
+//tests to make sure that UNNotificationCenter setDelegate: duplicate calls don't double-swizzle for the same object
+- (void)testSwizzling {
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    
+    DummyNotificationCenterDelegate *delegate = [[DummyNotificationCenterDelegate alloc] init];
+    
+    IMP original = class_getMethodImplementation([delegate class], @selector(userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:));
+    
+    center.delegate = delegate;
+    
+    IMP swizzled = class_getMethodImplementation([delegate class], @selector(userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:));
+    
+    XCTAssertNotEqual(original, swizzled);
+    
+    //calling setDelegate: a second time on the same object should not re-exchange method implementations
+    //thus the new method implementation should still be the same, swizzled == newSwizzled should be true
+    center.delegate = delegate;
+    
+    IMP newSwizzled = class_getMethodImplementation([delegate class], @selector(userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:));
+    
+    XCTAssertNotEqual(original, newSwizzled);
+    XCTAssertEqual(swizzled, newSwizzled);
+  
+}
+
+- (UNNotificationAttachment *)deliverNotificationWithJSON:(id)json {
+    id notifResponse = [UnitTestCommonMethods createBasiciOSNotificationResponseWithPayload:json];
+    
+    [[notifResponse notification].request.content setValue:@"some_category" forKey:@"categoryIdentifier"];
+    
+    UNMutableNotificationContent* content = [OneSignal didReceiveNotificationExtensionRequest:[notifResponse notification].request withMutableNotificationContent:nil];
+    
+    return content.attachments.firstObject;
+}
+
+- (id)exampleNotificationJSONWithMediaURL:(NSString *)urlString {
+    return @{@"aps": @{
+                     @"mutable-content": @1,
+                     @"alert": @"Message Body"
+                     },
+             @"os_data": @{
+                     @"i": @"b2f7f966-d8cc-11e4-bed1-df8f05be55ba",
+                     @"buttons": @[@{@"i": @"id1", @"n": @"text1"}],
+                     @"att": @{ @"id": urlString }
+                     }};
+}
+
+- (void)testExtractFileExtensionFromMimeType {
+    //test to make sure the MIME type parsing works correctly
+    //NSURLSessionOverrider returns image/png for this URL
+    id pngFormat = [self exampleNotificationJSONWithMediaURL:@"http://domain.com/file"];
+    
+    let downloadedPngFilename = [self deliverNotificationWithJSON:pngFormat].URL.lastPathComponent;
+    XCTAssertTrue([downloadedPngFilename.supportedFileExtension isEqualToString:@"png"]);
+}
+
+- (void)testExtractFileExtensionFromQueryParameter {
+    // we allow developers to add ?filename=test.jpg (for example) to attachment URL's in cases where there is no extension & no mime type
+    // tests to make sure the SDK correctly extracts the file extension from the `filename` URL query parameter
+    // NSURLSessionOverrider returns nil for this URL
+    id jpgFormat = [self exampleNotificationJSONWithMediaURL:@"http://domain.com/secondFile?filename=test.jpg"];
+    
+    let downloadedJpgFilename = [self deliverNotificationWithJSON:jpgFormat].URL.lastPathComponent;
+    XCTAssertTrue([downloadedJpgFilename.supportedFileExtension isEqualToString:@"jpg"]);
+}
+
+- (void)testFileExtensionPrioritizesURLFileExtension {
+    //tests to make sure that the URL's file extension is prioritized above the MIME type and URL query param
+    //this attachment URL will have a file extension, a MIME type, and a filename query parameter. It should prioritize the URL file extension (gif)
+    //NSURLSessionOverrider returns image/png for this URL
+    id gifFormat = [self exampleNotificationJSONWithMediaURL:@"http://domain.com/file.gif?filename=test.png"];
+    
+    let downloadedGifFilename = [self deliverNotificationWithJSON:gifFormat].URL.lastPathComponent;
+    XCTAssertTrue([downloadedGifFilename.supportedFileExtension isEqualToString:@"gif"]);
 }
 
 @end

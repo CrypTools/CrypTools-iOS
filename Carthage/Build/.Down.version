@@ -1,9 +1,27 @@
 {
-  "commitish" : "v0.5.1",
+  "Mac" : [
+    {
+      "name" : "Down",
+      "hash" : "b4525a235b992276ac94b837f83201f545d5951e110c94f134d0b01485f49d1d"
+    }
+  ],
+  "watchOS" : [
+    {
+      "name" : "Down",
+      "hash" : "65dfc7a7c80597647f3831d4d850f696c8337d90a49438ec5ccc0ae35331522b"
+    }
+  ],
+  "tvOS" : [
+    {
+      "name" : "Down",
+      "hash" : "2181d0315d9e7e4ad51ae833c23d53a31060f7603bf41ca8f1271d95ad4686dc"
+    }
+  ],
+  "commitish" : "v0.5.2",
   "iOS" : [
     {
-      "hash" : "fa337fdae7c3f7a784edf22d5da5efbf10d87332035d3f011245aeb4df3c79fd",
-      "name" : "Down"
+      "name" : "Down",
+      "hash" : "7c9b8d63fe8e58c657b8c13fa35f356bcfeab002bb7680c877eb658aed3aa996"
     }
   ]
 }

@@ -28,11 +28,16 @@
 #import "OneSignalClient.h"
 #import "UIApplicationDelegate+OneSignal.h"
 #import "ReattemptRequest.h"
+#import "OneSignal.h"
 
 #define REATTEMPT_DELAY 30.0
 #define REQUEST_TIMEOUT_REQUEST 60.0 //for most HTTP requests
 #define REQUEST_TIMEOUT_RESOURCE 100.0 //for loading a resource like an image
 #define MAX_ATTEMPT_COUNT 3
+
+@interface OneSignal (OneSignalClientExtra)
++ (BOOL)shouldLogMissingPrivacyConsentErrorWithMethodName:(NSString *)methodName;
+@end
 
 @interface OneSignalClient ()
 @property (strong, nonatomic) NSURLSession *sharedSession;
@@ -67,7 +72,7 @@
     
     //execute on a background thread or the semaphore will block the caller thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+        dispatch_group_t group = dispatch_group_create();
         
         __block NSMutableDictionary<NSString *, NSError *> *errors = [NSMutableDictionary new];
         __block NSMutableDictionary<NSString *, NSDictionary *> *results = [NSMutableDictionary new];
@@ -75,18 +80,19 @@
         for (NSString *identifier in requests.allKeys) {
             let request = requests[identifier];
             
+            //use a dispatch_group instead of a semaphore, in case the failureBlock gets called synchronously
+            //this will prevent the SDK from waiting/blocking on a request that instantly failed
+            dispatch_group_enter(group);
             [self executeRequest:request onSuccess:^(NSDictionary *result) {
                 results[identifier] = result;
-                dispatch_semaphore_signal(semaphore);
+                dispatch_group_leave(group);
             } onFailure:^(NSError *error) {
                 errors[identifier] = error;
-                dispatch_semaphore_signal(semaphore);
+                dispatch_group_leave(group);
             }];
         }
         
-        for (int i = 0; i < requests.count; i++) {
-            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-        }
+        dispatch_group_wait(group, dispatch_time(DISPATCH_TIME_NOW, REQUEST_TIMEOUT_REQUEST * NSEC_PER_SEC));
         
         //requests should all be completed at this point
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -100,6 +106,12 @@
 }
 
 - (void)executeRequest:(OneSignalRequest *)request onSuccess:(OSResultSuccessBlock)successBlock onFailure:(OSFailureBlock)failureBlock {
+    
+    if (request.method != GET && [OneSignal shouldLogMissingPrivacyConsentErrorWithMethodName:nil]) {
+        failureBlock([NSError errorWithDomain:@"OneSignal Error" code:0 userInfo:@{@"error" : [NSString stringWithFormat:@"Attempted to perform an HTTP request (%@) before the user provided privacy consent.", NSStringFromClass(request.class)]}]);
+        return;
+    }
+    
     if (![self validRequest:request]) {
         [self handleMissingAppIdError:failureBlock withRequest:request];
         return;

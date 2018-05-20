@@ -37,14 +37,19 @@
 }
 
 // Override downloading of media attachment
-+ (BOOL)overrideDownloadItemAtURL:(NSURL*)url toFile:(NSString*)localPath error:(NSError*)error {
++ (NSString *)overrideDownloadItemAtURL:(NSURL*)url toFile:(NSString*)localPath error:(NSError*)error {
     NSString *content = @"File Contents";
     NSData *fileContents = [content dataUsingEncoding:NSUTF8StringEncoding];
     [[NSFileManager defaultManager] createFileAtPath:localPath
                                             contents:fileContents
                                           attributes:nil];
     
-    return true;
+    if ([url.absoluteString isEqualToString:@"http://domain.com/file"])
+        return @"image/png";
+    else if ([url.absoluteString isEqualToString:@"http://domain.com/secondFile"])
+        return nil;
+    else
+        return @"image/jpg";
 }
 
 @end

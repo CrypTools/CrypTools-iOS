@@ -73,7 +73,7 @@ class LevelController: UIViewController, WCSessionDelegate {
 		let trueAns = level.answer
 		let guess = Answer.text
 		if trueAns == guess {
-			let appGroupID = "group.com.arguiot.CrypTools"
+			let appGroupID = "group.arthur_guiot.CrypTools"
 			let defaults = UserDefaults(suiteName: appGroupID)
 			var doneArray = defaults?.array(forKey: "done")
 			doneArray?.append(self.level.id)
@@ -90,7 +90,7 @@ class LevelController: UIViewController, WCSessionDelegate {
 	}
 	
 	func AppleWatchPush() {
-		let appGroupID = "group.com.arguiot.CrypTools"
+		let appGroupID = "group.arthur_guiot.CrypTools"
 		let defaults = UserDefaults(suiteName: appGroupID)
 		
 		if WCSession.isSupported() { //makes sure it's not an iPad or iPod
