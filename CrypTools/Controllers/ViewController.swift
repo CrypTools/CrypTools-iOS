@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 	}
 	
 	func defaults() {
-		let appGroupID = "group.arthur_guiot.CrypTools"
+		let appGroupID = "group.ArthurG.CrypTools"
 		let defaults = UserDefaults(suiteName: appGroupID)
 		if (defaults?.array(forKey: "done") == nil) {
 			defaults?.setValue([], forKey: "done")
@@ -121,7 +121,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 				self.Loading.isHidden = true
 				self.LearnText.isHidden = false
 				
-				let appGroupID = "group.arthur_guiot.CrypTools"
+				let appGroupID = "group.ArthurG.CrypTools"
 				let defaults = UserDefaults(suiteName: appGroupID)
 				defaults?.setValue(self.levels.count, forKey: "levels")
 				
@@ -133,7 +133,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 	}
 	
 	func updateProgress() {
-		let appGroupID = "group.arthur_guiot.CrypTools"
+		let appGroupID = "group.ArthurG.CrypTools"
 		let defaults = UserDefaults(suiteName: appGroupID)
 		
 		let nDone = Float((defaults?.array(forKey: "done")?.count)!)
@@ -166,7 +166,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let level = levels[indexPath.row]
 		
-		let appGroupID = "group.arthur_guiot.CrypTools"
+		let appGroupID = "group.ArthurG.CrypTools"
 		let defaults = UserDefaults(suiteName: appGroupID)
 		
 		let done: [String] = defaults?.array(forKey: "done") as! [String]
