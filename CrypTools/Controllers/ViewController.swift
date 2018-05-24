@@ -9,22 +9,9 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import WatchConnectivity
 
 
-class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
-	func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-		
-	}
-	
-	func sessionDidBecomeInactive(_ session: WCSession) {
-		
-	}
-	
-	func sessionDidDeactivate(_ session: WCSession) {
-		
-	}
-	
+class ViewController: UIViewController, UITextFieldDelegate {
 	
 	@IBOutlet weak var TableView: UITableView!
 	@IBOutlet weak var Loading: UIActivityIndicatorView!
@@ -65,29 +52,13 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 	}
 	
 	func defaults() {
-		let appGroupID = "group.ArthurG.CrypTools"
+		let appGroupID = "group.com.ArthurG.CrypTools"
 		let defaults = UserDefaults(suiteName: appGroupID)
 		if (defaults?.array(forKey: "done") == nil) {
 			defaults?.setValue([], forKey: "done")
 			defaults?.setValue(1, forKey: "levels")
 		}
-		
-		if WCSession.isSupported() { //makes sure it's not an iPad or iPod
-			let watchSession = WCSession.default
-			watchSession.delegate = self as WCSessionDelegate
-			watchSession.activate()
-			if watchSession.isPaired && watchSession.isWatchAppInstalled {
-				do {
-					try watchSession.updateApplicationContext([
-						"done": defaults?.array(forKey: "done") ?? [],
-						"levels": defaults?.integer(forKey: "levels") ?? 1
-						])
-				} catch let error as NSError {
-					print(error.description)
-				}
-			}
-		}
-		
+		defaults?.synchronize()
 		
 	}
 	var levels: [Level] = []
@@ -121,7 +92,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 				self.Loading.isHidden = true
 				self.LearnText.isHidden = false
 				
-				let appGroupID = "group.ArthurG.CrypTools"
+				let appGroupID = "group.com.ArthurG.CrypTools"
 				let defaults = UserDefaults(suiteName: appGroupID)
 				defaults?.setValue(self.levels.count, forKey: "levels")
 				
@@ -133,7 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WCSessionDelegate {
 	}
 	
 	func updateProgress() {
-		let appGroupID = "group.ArthurG.CrypTools"
+		let appGroupID = "group.com.ArthurG.CrypTools"
 		let defaults = UserDefaults(suiteName: appGroupID)
 		
 		let nDone = Float((defaults?.array(forKey: "done")?.count)!)
@@ -166,7 +137,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let level = levels[indexPath.row]
 		
-		let appGroupID = "group.ArthurG.CrypTools"
+		let appGroupID = "group.com.ArthurG.CrypTools"
 		let defaults = UserDefaults(suiteName: appGroupID)
 		
 		let done: [String] = defaults?.array(forKey: "done") as! [String]

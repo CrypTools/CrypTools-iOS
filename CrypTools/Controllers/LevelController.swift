@@ -10,20 +10,8 @@ import UIKit
 import WebKit
 import Down
 import Alamofire
-import WatchConnectivity
 
-class LevelController: UIViewController, WCSessionDelegate {
-	func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-		
-	}
-	
-	func sessionDidBecomeInactive(_ session: WCSession) {
-		
-	}
-	
-	func sessionDidDeactivate(_ session: WCSession) {
-		
-	}
+class LevelController: UIViewController {
 	
 	
 	@IBOutlet weak var Loading: UIActivityIndicatorView!
@@ -73,41 +61,20 @@ class LevelController: UIViewController, WCSessionDelegate {
 		let trueAns = level.answer
 		let guess = Answer.text
 		if trueAns == guess {
-			let appGroupID = "group.ArthurG.CrypTools"
+			let appGroupID = "group.com.ArthurG.CrypTools"
 			let defaults = UserDefaults(suiteName: appGroupID)
 			var doneArray = defaults?.array(forKey: "done")
 			doneArray?.append(self.level.id)
 			defaults?.setValue(doneArray, forKey: "done")
 			
-			self.AppleWatchPush()
-			
+			defaults?.synchronize()
+            
 			performSegue(withIdentifier: "GoodAnswer", sender: self)
 		}
 	}
 	@IBAction func back(_ sender: Any) {
 		print("Going back")
 		performSegue(withIdentifier: "BackLevel", sender: sender)
-	}
-	
-	func AppleWatchPush() {
-		let appGroupID = "group.ArthurG.CrypTools"
-		let defaults = UserDefaults(suiteName: appGroupID)
-		
-		if WCSession.isSupported() { //makes sure it's not an iPad or iPod
-			let watchSession = WCSession.default
-			watchSession.delegate = self as WCSessionDelegate
-			watchSession.activate()
-			if watchSession.isPaired && watchSession.isWatchAppInstalled {
-				do {
-					try watchSession.updateApplicationContext([
-						"done": defaults?.array(forKey: "done") ?? [],
-						"levels": defaults?.integer(forKey: "levels") ?? 1
-						])
-				} catch let error as NSError {
-					print(error.description)
-				}
-			}
-		}
 	}
 	
 	@objc func keyboardWillShow(notification: NSNotification) {

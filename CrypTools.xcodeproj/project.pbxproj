@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6830700A20B6925500BA2311 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6830700920B6925500BA2311 /* NotificationCenter.framework */; };
+		6830700D20B6925500BA2311 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830700C20B6925500BA2311 /* TodayViewController.swift */; };
+		6830701020B6925500BA2311 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6830700E20B6925500BA2311 /* MainInterface.storyboard */; };
+		6830701420B6925500BA2311 /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6830700820B6925500BA2311 /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6830701820B6935300BA2311 /* RobotoMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67D208B1F65001E4BFE /* RobotoMono-Bold.ttf */; };
+		6830701920B6935300BA2311 /* RobotoMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D675208B1F64001E4BFE /* RobotoMono-BoldItalic.ttf */; };
+		6830701A20B6935300BA2311 /* RobotoMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D676208B1F64001E4BFE /* RobotoMono-Italic.ttf */; };
+		6830701B20B6935300BA2311 /* RobotoMono-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67E208B1F65001E4BFE /* RobotoMono-Light.ttf */; };
+		6830701C20B6935300BA2311 /* RobotoMono-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D679208B1F64001E4BFE /* RobotoMono-LightItalic.ttf */; };
+		6830701D20B6935300BA2311 /* RobotoMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D677208B1F64001E4BFE /* RobotoMono-Medium.ttf */; };
+		6830701E20B6935300BA2311 /* RobotoMono-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D678208B1F64001E4BFE /* RobotoMono-MediumItalic.ttf */; };
+		6830701F20B6935300BA2311 /* RobotoMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67B208B1F65001E4BFE /* RobotoMono-Regular.ttf */; };
+		6830702020B6935300BA2311 /* RobotoMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67C208B1F65001E4BFE /* RobotoMono-Thin.ttf */; };
+		6830702120B6935300BA2311 /* RobotoMono-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67A208B1F65001E4BFE /* RobotoMono-ThinItalic.ttf */; };
+		6830702220B6935700BA2311 /* RobotoMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67D208B1F65001E4BFE /* RobotoMono-Bold.ttf */; };
+		6830702320B6935700BA2311 /* RobotoMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D675208B1F64001E4BFE /* RobotoMono-BoldItalic.ttf */; };
+		6830702420B6935700BA2311 /* RobotoMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D676208B1F64001E4BFE /* RobotoMono-Italic.ttf */; };
+		6830702520B6935700BA2311 /* RobotoMono-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67E208B1F65001E4BFE /* RobotoMono-Light.ttf */; };
+		6830702620B6935700BA2311 /* RobotoMono-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D679208B1F64001E4BFE /* RobotoMono-LightItalic.ttf */; };
+		6830702720B6935700BA2311 /* RobotoMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D677208B1F64001E4BFE /* RobotoMono-Medium.ttf */; };
+		6830702820B6935700BA2311 /* RobotoMono-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D678208B1F64001E4BFE /* RobotoMono-MediumItalic.ttf */; };
+		6830702920B6935700BA2311 /* RobotoMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67B208B1F65001E4BFE /* RobotoMono-Regular.ttf */; };
+		6830702A20B6935700BA2311 /* RobotoMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67C208B1F65001E4BFE /* RobotoMono-Thin.ttf */; };
+		6830702B20B6935700BA2311 /* RobotoMono-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67A208B1F65001E4BFE /* RobotoMono-ThinItalic.ttf */; };
 		684D930020B059550015B931 /* Down.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684D92FE20B059550015B931 /* Down.framework */; };
 		684D930120B059560015B931 /* Down.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 684D92FE20B059550015B931 /* Down.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD0A74D6208DFD61008B0D9A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A74D5208DFD61008B0D9A /* ProgressBar.swift */; };
@@ -75,6 +99,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6830701220B6925500BA2311 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD37C7DF20805A7D00834BFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6830700720B6925500BA2311;
+			remoteInfo = Widget;
+		};
 		DDE7D6A9208B65AD001E4BFE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD37C7DF20805A7D00834BFF /* Project object */;
@@ -115,6 +146,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				6830701420B6925500BA2311 /* Widget.appex in Embed App Extensions */,
 				DDE7D6AB208B65AD001E4BFE /* iMessage.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -123,6 +155,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6830700820B6925500BA2311 /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6830700920B6925500BA2311 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		6830700C20B6925500BA2311 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		6830700F20B6925500BA2311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		6830701120B6925500BA2311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6830702C20B6955C00BA2311 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 		684D92FE20B059550015B931 /* Down.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Down.framework; path = Carthage/Build/iOS/Down.framework; sourceTree = "<group>"; };
 		DD0A74D5208DFD61008B0D9A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		DD1D01C12080A65F001D833C /* CrypTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CrypTools.entitlements; sourceTree = "<group>"; };
@@ -181,6 +219,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6830700520B6925500BA2311 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6830700A20B6925500BA2311 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD2DD3A520820E1E008951C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +256,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6830700B20B6925500BA2311 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				6830702C20B6955C00BA2311 /* Widget.entitlements */,
+				6830700C20B6925500BA2311 /* TodayViewController.swift */,
+				6830700E20B6925500BA2311 /* MainInterface.storyboard */,
+				6830701120B6925500BA2311 /* Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		DD1D01C32080AB43001D833C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +349,7 @@
 				DD37C7E920805A7D00834BFF /* CrypTools */,
 				DDE7D6A0208B65AB001E4BFE /* iMessage */,
 				DD2DD3A920820E1E008951C1 /* OneSignalNotificationServiceExtension */,
+				6830700B20B6925500BA2311 /* Widget */,
 				DDE7D69D208B65AB001E4BFE /* Frameworks */,
 				684D92FE20B059550015B931 /* Down.framework */,
 				DD37C7E820805A7D00834BFF /* Products */,
@@ -307,6 +365,7 @@
 				DD37C7E720805A7D00834BFF /* CrypTools.app */,
 				DD2DD3A820820E1E008951C1 /* OneSignalNotificationServiceExtension.appex */,
 				DDE7D69C208B65AB001E4BFE /* iMessage.appex */,
+				6830700820B6925500BA2311 /* Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -351,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE7D69E208B65AB001E4BFE /* Messages.framework */,
+				6830700920B6925500BA2311 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -370,6 +430,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6830700720B6925500BA2311 /* Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6830701720B6925500BA2311 /* Build configuration list for PBXNativeTarget "Widget" */;
+			buildPhases = (
+				6830700420B6925500BA2311 /* Sources */,
+				6830700520B6925500BA2311 /* Frameworks */,
+				6830700620B6925500BA2311 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget;
+			productName = Widget;
+			productReference = 6830700820B6925500BA2311 /* Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		DD2DD3A720820E1E008951C1 /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD2DD3B220820E1E008951C1 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
@@ -403,6 +480,7 @@
 			);
 			dependencies = (
 				DDE7D6AA208B65AD001E4BFE /* PBXTargetDependency */,
+				6830701320B6925500BA2311 /* PBXTargetDependency */,
 			);
 			name = CrypTools;
 			productName = CrypTools;
@@ -436,6 +514,14 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Arthur Guiot";
 				TargetAttributes = {
+					6830700720B6925500BA2311 = {
+						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					DD2DD3A720820E1E008951C1 = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -471,11 +557,30 @@
 				DD37C7E620805A7D00834BFF /* CrypTools */,
 				DD2DD3A720820E1E008951C1 /* OneSignalNotificationServiceExtension */,
 				DDE7D69B208B65AB001E4BFE /* iMessage */,
+				6830700720B6925500BA2311 /* Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6830700620B6925500BA2311 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6830701B20B6935300BA2311 /* RobotoMono-Light.ttf in Resources */,
+				6830702020B6935300BA2311 /* RobotoMono-Thin.ttf in Resources */,
+				6830701E20B6935300BA2311 /* RobotoMono-MediumItalic.ttf in Resources */,
+				6830701020B6925500BA2311 /* MainInterface.storyboard in Resources */,
+				6830702120B6935300BA2311 /* RobotoMono-ThinItalic.ttf in Resources */,
+				6830701D20B6935300BA2311 /* RobotoMono-Medium.ttf in Resources */,
+				6830701920B6935300BA2311 /* RobotoMono-BoldItalic.ttf in Resources */,
+				6830701A20B6935300BA2311 /* RobotoMono-Italic.ttf in Resources */,
+				6830701820B6935300BA2311 /* RobotoMono-Bold.ttf in Resources */,
+				6830701C20B6935300BA2311 /* RobotoMono-LightItalic.ttf in Resources */,
+				6830701F20B6935300BA2311 /* RobotoMono-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD2DD3A620820E1E008951C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,8 +613,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6830702220B6935700BA2311 /* RobotoMono-Bold.ttf in Resources */,
+				6830702920B6935700BA2311 /* RobotoMono-Regular.ttf in Resources */,
 				DDE7D6A7208B65AD001E4BFE /* Assets.xcassets in Resources */,
+				6830702620B6935700BA2311 /* RobotoMono-LightItalic.ttf in Resources */,
 				DDE7D6A5208B65AB001E4BFE /* MainInterface.storyboard in Resources */,
+				6830702520B6935700BA2311 /* RobotoMono-Light.ttf in Resources */,
+				6830702A20B6935700BA2311 /* RobotoMono-Thin.ttf in Resources */,
+				6830702720B6935700BA2311 /* RobotoMono-Medium.ttf in Resources */,
+				6830702320B6935700BA2311 /* RobotoMono-BoldItalic.ttf in Resources */,
+				6830702B20B6935700BA2311 /* RobotoMono-ThinItalic.ttf in Resources */,
+				6830702820B6935700BA2311 /* RobotoMono-MediumItalic.ttf in Resources */,
+				6830702420B6935700BA2311 /* RobotoMono-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +647,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6830700420B6925500BA2311 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6830700D20B6925500BA2311 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD2DD3A420820E1E008951C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -595,6 +718,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6830701320B6925500BA2311 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6830700720B6925500BA2311 /* Widget */;
+			targetProxy = 6830701220B6925500BA2311 /* PBXContainerItemProxy */;
+		};
 		DDE7D6AA208B65AD001E4BFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DDE7D69B208B65AB001E4BFE /* iMessage */;
@@ -603,6 +731,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6830700E20B6925500BA2311 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6830700F20B6925500BA2311 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		DD37C7EE20805A7D00834BFF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -630,6 +766,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6830701520B6925500BA2311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73CCF549YB;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ArthurG.CrypTools.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6830701620B6925500BA2311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73CCF549YB;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ArthurG.CrypTools.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DD2DD3B020820E1E008951C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -877,6 +1055,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6830701720B6925500BA2311 /* Build configuration list for PBXNativeTarget "Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6830701520B6925500BA2311 /* Debug */,
+				6830701620B6925500BA2311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DD2DD3B220820E1E008951C1 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
