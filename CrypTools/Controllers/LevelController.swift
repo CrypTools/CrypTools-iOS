@@ -14,8 +14,8 @@ import Alamofire
 class LevelController: UIViewController {
 	
 	
-	@IBOutlet weak var Loading: UIActivityIndicatorView!
-	@IBOutlet weak var MarkDownView: UITextView!
+    @IBOutlet weak var MarkDown: WKWebView!
+    @IBOutlet weak var Loading: UIActivityIndicatorView!
 	@IBOutlet weak var Answer: UITextField!
 	
 	var level: Level = Level(id: "", fancy: "", questionURL: "", answer: "");
@@ -46,11 +46,11 @@ class LevelController: UIViewController {
 					.show()
 			}
 			let markdown = String(data: response.data!, encoding: .utf8)
-			let down = Down(markdownString: markdown!)
-			let html = try? down.toAttributedString()
-			self.MarkDownView.attributedText = html!
-			
-			self.Loading.isHidden = true
+            let down = Down(markdownString: markdown!)
+            let body = try? down.toHTML()
+            let mds = MarkdownStyle()
+            self.MarkDown.loadHTMLString(mds.get(body!), baseURL: nil)
+            self.Loading.isHidden = true;
 			
 		}
 	}

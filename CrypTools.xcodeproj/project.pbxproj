@@ -31,6 +31,7 @@
 		6830702920B6935700BA2311 /* RobotoMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67B208B1F65001E4BFE /* RobotoMono-Regular.ttf */; };
 		6830702A20B6935700BA2311 /* RobotoMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67C208B1F65001E4BFE /* RobotoMono-Thin.ttf */; };
 		6830702B20B6935700BA2311 /* RobotoMono-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE7D67A208B1F65001E4BFE /* RobotoMono-ThinItalic.ttf */; };
+		6830702E20B6AD3A00BA2311 /* MarkdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830702D20B6AD3A00BA2311 /* MarkdownStyle.swift */; };
 		684D930020B059550015B931 /* Down.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684D92FE20B059550015B931 /* Down.framework */; };
 		684D930120B059560015B931 /* Down.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 684D92FE20B059550015B931 /* Down.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD0A74D6208DFD61008B0D9A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A74D5208DFD61008B0D9A /* ProgressBar.swift */; };
@@ -161,6 +162,7 @@
 		6830700F20B6925500BA2311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		6830701120B6925500BA2311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6830702C20B6955C00BA2311 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
+		6830702D20B6AD3A00BA2311 /* MarkdownStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownStyle.swift; sourceTree = "<group>"; };
 		684D92FE20B059550015B931 /* Down.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Down.framework; path = Carthage/Build/iOS/Down.framework; sourceTree = "<group>"; };
 		DD0A74D5208DFD61008B0D9A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		DD1D01C12080A65F001D833C /* CrypTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CrypTools.entitlements; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 			children = (
 				DD1D01E62080C70B001D833C /* Levels.swift */,
 				DD4F8F5F208487B8007CB8AA /* Ciphers.swift */,
+				6830702D20B6AD3A00BA2311 /* MarkdownStyle.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 				DD2DD3BB208482DC008951C1 /* EncryptController.swift in Sources */,
 				DDE7D697208B257A001E4BFE /* GoogleReporter.swift in Sources */,
 				DD4F8F7520872A72007CB8AA /* binascii.swift in Sources */,
+				6830702E20B6AD3A00BA2311 /* MarkdownStyle.swift in Sources */,
 				DD1D01E42080BEEC001D833C /* LevelCell.swift in Sources */,
 				DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */,
 				DD4BDFA92082037B00498B14 /* Good Answer.swift in Sources */,

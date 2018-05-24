@@ -245,15 +245,6 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ajN-FM-ZRY">
                                 <rect key="frame" x="169" y="30" width="37" height="37"/>
                             </activityIndicatorView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIW-TE-JOQ">
-                                <rect key="frame" x="0.0" y="96" width="375" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="WH8-fA-z84"/>
-                                </constraints>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-04-avb">
                                 <rect key="frame" x="132" y="449" width="110" height="32"/>
                                 <constraints>
@@ -300,25 +291,36 @@
                                     <action selector="share:" destination="Nc1-6N-F55" eventType="touchUpInside" id="sO5-JP-cCg"/>
                                 </connections>
                             </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-Ar-oNV">
+                                <rect key="frame" x="0.0" y="96" width="375" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="OJA-Ty-JrZ"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="JWD-kL-ASE" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="1OZ-bo-Nnj"/>
-                            <constraint firstItem="SE8-04-avb" firstAttribute="top" secondItem="gIW-TE-JOQ" secondAttribute="bottom" constant="53" id="88F-Vc-YK3"/>
+                            <constraint firstItem="SE8-04-avb" firstAttribute="top" secondItem="aG7-Ar-oNV" secondAttribute="bottom" constant="53" id="7Ad-bg-fiN"/>
                             <constraint firstItem="SE8-04-avb" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="Ahr-fZ-8W4"/>
                             <constraint firstItem="l6u-XQ-Wkg" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="GEl-8a-c8Q"/>
                             <constraint firstItem="UJO-X1-w9T" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="IDM-Ly-K1E"/>
                             <constraint firstItem="a6I-ZZ-CKK" firstAttribute="top" secondItem="4eC-Kg-6TR" secondAttribute="top" id="J1z-kl-OuV"/>
-                            <constraint firstItem="gIW-TE-JOQ" firstAttribute="top" secondItem="JWD-kL-ASE" secondAttribute="bottom" id="RWa-Pd-fPY"/>
                             <constraint firstItem="l6u-XQ-Wkg" firstAttribute="top" secondItem="SE8-04-avb" secondAttribute="bottom" constant="8" id="RZz-y0-C85"/>
                             <constraint firstItem="ajN-FM-ZRY" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="TdK-a1-1VP"/>
+                            <constraint firstItem="aG7-Ar-oNV" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="XKV-BI-2QM"/>
                             <constraint firstItem="JWD-kL-ASE" firstAttribute="top" secondItem="4eC-Kg-6TR" secondAttribute="top" id="axr-BR-3sA"/>
+                            <constraint firstItem="aG7-Ar-oNV" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="dCk-fu-7JY"/>
                             <constraint firstItem="JWD-kL-ASE" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="eue-V6-koc"/>
                             <constraint firstItem="ajN-FM-ZRY" firstAttribute="top" secondItem="mlI-hc-dl0" secondAttribute="top" constant="10" id="grU-l8-Vcx"/>
                             <constraint firstItem="a6I-ZZ-CKK" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="gsh-IC-MuW"/>
-                            <constraint firstItem="gIW-TE-JOQ" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="wcM-wx-pwA"/>
-                            <constraint firstItem="gIW-TE-JOQ" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="wj4-re-LTU"/>
+                            <constraint firstItem="aG7-Ar-oNV" firstAttribute="top" secondItem="JWD-kL-ASE" secondAttribute="bottom" id="lqt-a6-Vp5"/>
                             <constraint firstItem="UJO-X1-w9T" firstAttribute="top" secondItem="4eC-Kg-6TR" secondAttribute="top" id="xqS-v7-4jH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mlI-hc-dl0"/>
@@ -327,7 +329,7 @@
                     <connections>
                         <outlet property="Answer" destination="l6u-XQ-Wkg" id="fDY-OJ-kCX"/>
                         <outlet property="Loading" destination="ajN-FM-ZRY" id="SgA-nL-aL4"/>
-                        <outlet property="MarkDownView" destination="gIW-TE-JOQ" id="2fm-CB-fc9"/>
+                        <outlet property="MarkDown" destination="aG7-Ar-oNV" id="QZA-O6-9Wz"/>
                         <segue destination="BNo-EN-YSS" kind="presentation" identifier="GoodAnswer" modalTransitionStyle="coverVertical" id="iaJ-UX-fH5"/>
                     </connections>
                 </viewController>
@@ -339,7 +341,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="892" y="117"/>
+            <point key="canvasLocation" x="892" y="116.49175412293854"/>
         </scene>
         <!--Good Answer-->
         <scene sceneID="63k-30-Vv3">
