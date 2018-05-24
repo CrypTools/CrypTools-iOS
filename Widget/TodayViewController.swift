@@ -26,7 +26,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         
         let progress = round((nDone / nLevels) * 100)
-        label.text = "You've completed \(progress)% of the levels \n\n \(Int(nLevels - nDone)) left"
+        label.text = "You've completed \(progress)% of the levels. \n \(Int(nLevels - nDone)) left"
     }
     func defaults() {
         let appGroupID = "group.com.ArthurG.CrypTools"
