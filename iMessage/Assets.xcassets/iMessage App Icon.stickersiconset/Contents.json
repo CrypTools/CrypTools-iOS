@@ -33,13 +33,13 @@
     {
       "size" : "67x50",
       "idiom" : "ipad",
-      "filename" : "ipad_67x50_2x.png",
+      "filename" : "iMessage iPad.png",
       "scale" : "2x"
     },
     {
       "size" : "74x55",
       "idiom" : "ipad",
-      "filename" : "ipad_74x55_2x.png",
+      "filename" : "iMessage iPad Pro.png",
       "scale" : "2x"
     },
     {
@@ -51,14 +51,14 @@
     {
       "size" : "27x20",
       "idiom" : "universal",
-      "filename" : "universal_27x20_2x.png",
+      "filename" : "iMessage.png",
       "scale" : "2x",
       "platform" : "ios"
     },
     {
       "size" : "27x20",
       "idiom" : "universal",
-      "filename" : "universal_27x20_3x.png",
+      "filename" : "iMessage3.png",
       "scale" : "3x",
       "platform" : "ios"
     },
