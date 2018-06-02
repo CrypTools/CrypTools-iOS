@@ -10,6 +10,8 @@ import UIKit
 import WebKit
 import Down
 import Alamofire
+import AudioToolbox
+
 
 class LevelController: UIViewController {
 	
@@ -20,6 +22,9 @@ class LevelController: UIViewController {
 	
 	var level: Level = Level(id: "", fancy: "", questionURL: "", answer: "");
 	
+    
+    let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -68,6 +73,24 @@ class LevelController: UIViewController {
 			defaults?.setValue(doneArray, forKey: "done")
 			
 			defaults?.synchronize()
+            
+            let filename = "success"
+            let ext = "m4a"
+            notificationFeedbackGenerator.prepare()
+            
+            if let soundUrl = Bundle.main.url(forResource: filename, withExtension: ext) {
+                var soundId: SystemSoundID = 0
+                
+                AudioServicesCreateSystemSoundID(soundUrl as CFURL, &soundId)
+                
+                AudioServicesAddSystemSoundCompletion(soundId, nil, nil, { (soundId, clientData) -> Void in
+                    AudioServicesDisposeSystemSoundID(soundId)
+                }, nil)
+                
+                AudioServicesPlaySystemSound(soundId)
+                notificationFeedbackGenerator.notificationOccurred(.success)
+            }
+            
             
 			performSegue(withIdentifier: "GoodAnswer", sender: self)
 		}
