@@ -18,6 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+        
+        let appGroupID = "group.com.ArthurG.CrypTools"
+        let defaults = UserDefaults(suiteName: appGroupID)
+        defaults?.synchronize()
+        if defaults?.string(forKey: "welcome") == Optional("true") {
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "Main")
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
+        
 		
 		// Google Analytics
 		GoogleReporter.shared.configure(withTrackerId: "UA-109503398-6")
@@ -58,6 +74,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func applicationDidBecomeActive(_ application: UIApplication) {
 		// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        
 		GoogleReporter.shared.session(start: true)
 	}
 

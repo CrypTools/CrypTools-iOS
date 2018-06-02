@@ -34,6 +34,9 @@
 		6830702E20B6AD3A00BA2311 /* MarkdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830702D20B6AD3A00BA2311 /* MarkdownStyle.swift */; };
 		684D930020B059550015B931 /* Down.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684D92FE20B059550015B931 /* Down.framework */; };
 		684D930120B059560015B931 /* Down.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 684D92FE20B059550015B931 /* Down.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6895B0A520C278A700BB26AB /* Tuto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6895B0A420C278A700BB26AB /* Tuto.storyboard */; };
+		6895B0A720C27AB200BB26AB /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6895B0A620C27AB200BB26AB /* Welcome.swift */; };
+		6895B0AA20C2843800BB26AB /* WelcomeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6895B0A920C2843800BB26AB /* WelcomeText.swift */; };
 		68D381B420C238A4001944C1 /* success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 68D381B320C238A3001944C1 /* success.m4a */; };
 		DD0A74D6208DFD61008B0D9A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A74D5208DFD61008B0D9A /* ProgressBar.swift */; };
 		DD1D01DF2080AF90001D833C /* NumberLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D01DE2080AF90001D833C /* NumberLabel.swift */; };
@@ -165,6 +168,9 @@
 		6830702C20B6955C00BA2311 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 		6830702D20B6AD3A00BA2311 /* MarkdownStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownStyle.swift; sourceTree = "<group>"; };
 		684D92FE20B059550015B931 /* Down.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Down.framework; path = Carthage/Build/iOS/Down.framework; sourceTree = "<group>"; };
+		6895B0A420C278A700BB26AB /* Tuto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tuto.storyboard; sourceTree = "<group>"; };
+		6895B0A620C27AB200BB26AB /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		6895B0A920C2843800BB26AB /* WelcomeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeText.swift; sourceTree = "<group>"; };
 		68D381B320C238A3001944C1 /* success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = success.m4a; sourceTree = "<group>"; };
 		DD0A74D5208DFD61008B0D9A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		DD1D01C12080A65F001D833C /* CrypTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CrypTools.entitlements; sourceTree = "<group>"; };
@@ -271,6 +277,15 @@
 			path = Widget;
 			sourceTree = "<group>";
 		};
+		6895B0A820C27AB800BB26AB /* First Launch */ = {
+			isa = PBXGroup;
+			children = (
+				6895B0A620C27AB200BB26AB /* Welcome.swift */,
+				6895B0A920C2843800BB26AB /* WelcomeText.swift */,
+			);
+			path = "First Launch";
+			sourceTree = "<group>";
+		};
 		68D381B520C238AC001944C1 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +297,7 @@
 		DD1D01C32080AB43001D833C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6895B0A820C27AB800BB26AB /* First Launch */,
 				DD37C7EC20805A7D00834BFF /* ViewController.swift */,
 				DD1D01E32080BEEC001D833C /* LevelCell.swift */,
 				DD4BDFA12081AF4900498B14 /* LevelController.swift */,
@@ -342,6 +358,7 @@
 				DD37C7EE20805A7D00834BFF /* Main.storyboard */,
 				DD37C7F320805A7E00834BFF /* LaunchScreen.storyboard */,
 				DD2DD3B820847F6E008951C1 /* Try.storyboard */,
+				6895B0A420C278A700BB26AB /* Tuto.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -614,6 +631,7 @@
 			files = (
 				DD37C7F520805A7E00834BFF /* LaunchScreen.storyboard in Resources */,
 				DDE7D682208B1F65001E4BFE /* RobotoMono-MediumItalic.ttf in Resources */,
+				6895B0A520C278A700BB26AB /* Tuto.storyboard in Resources */,
 				DDE7D687208B1F65001E4BFE /* RobotoMono-Bold.ttf in Resources */,
 				DD37C7F220805A7E00834BFF /* Assets.xcassets in Resources */,
 				DDE7D681208B1F65001E4BFE /* RobotoMono-Medium.ttf in Resources */,
@@ -733,6 +751,7 @@
 				DD4F8F6B208488E8007CB8AA /* caesar.swift in Sources */,
 				DD4F8F6D208488E8007CB8AA /* BitShift.swift in Sources */,
 				DD1D01E72080C70B001D833C /* Levels.swift in Sources */,
+				6895B0A720C27AB200BB26AB /* Welcome.swift in Sources */,
 				DD4F8F72208488E8007CB8AA /* ROT13.swift in Sources */,
 				DD4F8F6F208488E8007CB8AA /* b64.swift in Sources */,
 				DD7FC4A5209C8FD40037B0B6 /* Zingle.swift in Sources */,
@@ -748,6 +767,7 @@
 				DD4F8F7520872A72007CB8AA /* binascii.swift in Sources */,
 				6830702E20B6AD3A00BA2311 /* MarkdownStyle.swift in Sources */,
 				DD1D01E42080BEEC001D833C /* LevelCell.swift in Sources */,
+				6895B0AA20C2843800BB26AB /* WelcomeText.swift in Sources */,
 				DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */,
 				DD4BDFA92082037B00498B14 /* Good Answer.swift in Sources */,
 				DD4F8F7720873E07007CB8AA /* HashShift.swift in Sources */,

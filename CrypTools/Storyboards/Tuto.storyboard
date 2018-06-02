@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9UB-RG-aLc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoMono-Bold.ttf">
+            <string>RobotoMono-Bold</string>
+        </array>
+        <array key="RobotoMono-Regular.ttf">
+            <string>RobotoMono-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Welcome-->
+        <scene sceneID="lSC-cW-Jbj">
+            <objects>
+                <viewController storyboardIdentifier="Welcome" title="Welcome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9UB-RG-aLc" customClass="Welcome" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XyL-Ss-krb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFH-Wt-hQB">
+                                <rect key="frame" x="108" y="311" width="159" height="44"/>
+                                <fontDescription key="fontDescription" name="RobotoMono-Bold" family="Roboto Mono" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9r-Ce-bUe">
+                                <rect key="frame" x="137" y="455" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LY4-A6-lKp"/>
+                                    <constraint firstAttribute="height" constant="100" id="Zmm-Kj-C6T"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="baseline_arrow_forward_black_48pt"/>
+                                <connections>
+                                    <segue destination="sUH-EU-heO" kind="show" id="keQ-nn-dfo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NFH-Wt-hQB" firstAttribute="centerX" secondItem="XyL-Ss-krb" secondAttribute="centerX" id="69S-U2-FYn"/>
+                            <constraint firstItem="k9r-Ce-bUe" firstAttribute="top" secondItem="NFH-Wt-hQB" secondAttribute="bottom" constant="100" id="NZS-FE-sii"/>
+                            <constraint firstItem="NFH-Wt-hQB" firstAttribute="centerY" secondItem="XyL-Ss-krb" secondAttribute="centerY" id="Wj3-c7-BhD"/>
+                            <constraint firstItem="k9r-Ce-bUe" firstAttribute="centerX" secondItem="XyL-Ss-krb" secondAttribute="centerX" id="xj5-Ee-pRc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jfc-n3-Z1w"/>
+                    </view>
+                    <connections>
+                        <outlet property="arrow" destination="k9r-Ce-bUe" id="qNF-HF-glx"/>
+                        <outlet property="label" destination="NFH-Wt-hQB" id="BCq-pr-JCz"/>
+                        <segue destination="xlF-yB-8bR" kind="show" identifier="skip" animates="NO" id="4IJ-Dj-U64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3u-jN-6Qj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1527" y="732"/>
+        </scene>
+        <!--Welcome Text-->
+        <scene sceneID="8OH-Nt-f5e">
+            <objects>
+                <viewController id="sUH-EU-heO" customClass="WelcomeText" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78v-KL-buG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-VG-yJo">
+                                <rect key="frame" x="137" y="65" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gnY-ku-pKo"/>
+                                    <constraint firstAttribute="width" constant="100" id="k6K-Um-vdm"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ok-Qz-vqk">
+                                <rect key="frame" x="65" y="190" width="245" height="377"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Cryptography is the art of writing and solving problems in order to prevent third parties or the public from reading private messages. And as any art, it can be taught. This was our mission by creating this platform.
+
+You'll have some challenges to complete: the first ones are easy, but don't worry, it will get much harder after some point.
+ 
+This app is not designed to be secure, it was created to be fun and to experiment with cryptography.
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQD-7B-LE8">
+                                <rect key="frame" x="163" y="597" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="baseline_arrow_forward_black_48pt"/>
+                                <connections>
+                                    <segue destination="xlF-yB-8bR" kind="show" id="6Js-u5-wBV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qqo-dn-pr8" firstAttribute="trailing" secondItem="0ok-Qz-vqk" secondAttribute="trailing" constant="65" id="1QE-pe-cdQ"/>
+                            <constraint firstItem="0ok-Qz-vqk" firstAttribute="leading" secondItem="qqo-dn-pr8" secondAttribute="leading" constant="65" id="1xf-0k-2wF"/>
+                            <constraint firstItem="xtk-VG-yJo" firstAttribute="top" secondItem="qqo-dn-pr8" secondAttribute="top" constant="45" id="9vo-Ra-sD9"/>
+                            <constraint firstItem="0ok-Qz-vqk" firstAttribute="top" secondItem="xtk-VG-yJo" secondAttribute="bottom" constant="25" id="Dqw-nO-5Eh"/>
+                            <constraint firstItem="qqo-dn-pr8" firstAttribute="bottom" secondItem="0ok-Qz-vqk" secondAttribute="bottom" constant="100" id="UUw-Jt-zO8"/>
+                            <constraint firstItem="xtk-VG-yJo" firstAttribute="centerX" secondItem="78v-KL-buG" secondAttribute="centerX" id="Z7q-hE-i6V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qqo-dn-pr8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6ZU-eJ-Puw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2B0-6s-RBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-687.20000000000005" y="730.88455772113946"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="UdG-at-K1m">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="xlF-yB-8bR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4c-Y1-BNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152" y="694"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="1024" height="1024"/>
+        <image name="baseline_arrow_forward_black_48pt" width="48" height="48"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4IJ-Dj-U64"/>
+    </inferredMetricsTieBreakers>
+</document>
