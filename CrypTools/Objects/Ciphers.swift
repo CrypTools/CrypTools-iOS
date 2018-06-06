@@ -13,9 +13,9 @@ class Cipher {
 	var name = [String]()
 	var call = [Any]()
 	var type = [Bool]() // true is encrypt, false is decrypt
-	func add(_ name: String, _ callback: (_ text: String, _ key: String) -> String, _ type: Bool = true) {
+    func add(_ name: String, _ callback: f?, _ type: Bool = true) {
 		self.name.append(name)
-		self.call.append(callback)
+        self.call.append(callback)
 		self.type.append(type)
 	}
 	func get(_ name: String?) -> f {
