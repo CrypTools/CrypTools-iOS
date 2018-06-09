@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -299,34 +300,30 @@
                                     <action selector="share:" destination="Nc1-6N-F55" eventType="touchUpInside" id="sO5-JP-cCg"/>
                                 </connections>
                             </button>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-Ar-oNV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPP-vi-yhw">
                                 <rect key="frame" x="0.0" y="96" width="375" height="301"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="JWD-kL-ASE" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="1OZ-bo-Nnj"/>
                             <constraint firstItem="l6u-XQ-Wkg" firstAttribute="top" secondItem="SE8-04-avb" secondAttribute="bottom" constant="8" id="4bT-T5-eV3"/>
-                            <constraint firstItem="aG7-Ar-oNV" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="9yJ-7I-Qn6"/>
+                            <constraint firstItem="jPP-vi-yhw" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="I1w-cy-f9q"/>
                             <constraint firstItem="UJO-X1-w9T" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="IDM-Ly-K1E"/>
                             <constraint firstItem="a6I-ZZ-CKK" firstAttribute="top" secondItem="4eC-Kg-6TR" secondAttribute="top" id="J1z-kl-OuV"/>
                             <constraint firstItem="SE8-04-avb" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="MY9-f6-LTO"/>
                             <constraint firstItem="ajN-FM-ZRY" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="TdK-a1-1VP"/>
-                            <constraint firstItem="SE8-04-avb" firstAttribute="top" secondItem="aG7-Ar-oNV" secondAttribute="bottom" constant="50" id="ZBe-6m-CVm"/>
+                            <constraint firstItem="jPP-vi-yhw" firstAttribute="top" secondItem="JWD-kL-ASE" secondAttribute="bottom" id="YV8-bj-Wg9"/>
                             <constraint firstItem="JWD-kL-ASE" firstAttribute="top" secondItem="4eC-Kg-6TR" secondAttribute="top" id="axr-BR-3sA"/>
                             <constraint firstItem="l6u-XQ-Wkg" firstAttribute="centerX" secondItem="4eC-Kg-6TR" secondAttribute="centerX" id="c8a-ua-AQp"/>
                             <constraint firstItem="mlI-hc-dl0" firstAttribute="bottom" secondItem="l6u-XQ-Wkg" secondAttribute="bottom" constant="150" id="cp7-Tz-TSH"/>
                             <constraint firstItem="JWD-kL-ASE" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="eue-V6-koc"/>
                             <constraint firstItem="ajN-FM-ZRY" firstAttribute="top" secondItem="mlI-hc-dl0" secondAttribute="top" constant="10" id="grU-l8-Vcx"/>
                             <constraint firstItem="a6I-ZZ-CKK" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="gsh-IC-MuW"/>
-                            <constraint firstItem="aG7-Ar-oNV" firstAttribute="top" secondItem="JWD-kL-ASE" secondAttribute="bottom" id="t8W-Ok-JwC"/>
-                            <constraint firstItem="aG7-Ar-oNV" firstAttribute="trailing" secondItem="mlI-hc-dl0" secondAttribute="trailing" id="tXx-WN-WA3"/>
+                            <constraint firstItem="jPP-vi-yhw" firstAttribute="leading" secondItem="mlI-hc-dl0" secondAttribute="leading" id="hZz-Sh-lj9"/>
+                            <constraint firstItem="SE8-04-avb" firstAttribute="top" secondItem="jPP-vi-yhw" secondAttribute="bottom" constant="50" id="rB1-rk-hEv"/>
                             <constraint firstItem="UJO-X1-w9T" firstAttribute="top" secondItem="4eC-Kg-6TR" secondAttribute="top" id="xqS-v7-4jH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mlI-hc-dl0"/>
@@ -335,7 +332,7 @@
                     <connections>
                         <outlet property="Answer" destination="l6u-XQ-Wkg" id="fDY-OJ-kCX"/>
                         <outlet property="Loading" destination="ajN-FM-ZRY" id="SgA-nL-aL4"/>
-                        <outlet property="MarkDown" destination="aG7-Ar-oNV" id="QZA-O6-9Wz"/>
+                        <outlet property="MDView" destination="jPP-vi-yhw" id="mBt-hw-VSO"/>
                         <segue destination="BNo-EN-YSS" kind="presentation" identifier="GoodAnswer" modalTransitionStyle="coverVertical" id="iaJ-UX-fH5"/>
                     </connections>
                 </viewController>

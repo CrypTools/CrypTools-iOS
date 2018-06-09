@@ -13,10 +13,11 @@ import Alamofire
 import AudioToolbox
 
 
-class LevelController: UIViewController {
+class LevelController: UIViewController, WKUIDelegate {
 	
 	
-    @IBOutlet weak var MarkDown: WKWebView!
+    @IBOutlet weak var MDView: UIView!
+    var MarkDown: WKWebView!
     @IBOutlet weak var Loading: UIActivityIndicatorView!
 	@IBOutlet weak var Answer: UITextField!
 	
@@ -28,6 +29,22 @@ class LevelController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        let webConfiguration = WKWebViewConfiguration()
+        let customFrame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 0.0, height: self.MDView.frame.size.height))
+        self.MarkDown = WKWebView (frame: customFrame , configuration: webConfiguration)
+        MarkDown.translatesAutoresizingMaskIntoConstraints = false
+        self.MDView.addSubview(MarkDown)
+        MarkDown.topAnchor.constraint(equalTo: MDView.topAnchor).isActive = true
+        MarkDown.rightAnchor.constraint(equalTo: MDView.rightAnchor).isActive = true
+        MarkDown.leftAnchor.constraint(equalTo: MDView.leftAnchor).isActive = true
+        MarkDown.bottomAnchor.constraint(equalTo: MDView.bottomAnchor).isActive = true
+        MarkDown.heightAnchor.constraint(equalTo: MDView.heightAnchor).isActive = true
+        MarkDown.uiDelegate = self
+        
+        
+        
 		GoogleReporter.shared.screenView("Level - \(level.id)")
 		
 		renderMarkDown()
