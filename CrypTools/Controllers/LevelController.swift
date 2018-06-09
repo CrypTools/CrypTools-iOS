@@ -22,9 +22,6 @@ class LevelController: UIViewController, WKUIDelegate {
 	@IBOutlet weak var Answer: UITextField!
 	
 	var level: Level = Level(id: "", fancy: "", questionURL: "", answer: "");
-	
-    
-    let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +39,6 @@ class LevelController: UIViewController, WKUIDelegate {
         MarkDown.bottomAnchor.constraint(equalTo: MDView.bottomAnchor).isActive = true
         MarkDown.heightAnchor.constraint(equalTo: MDView.heightAnchor).isActive = true
         MarkDown.uiDelegate = self
-        
         
         
 		GoogleReporter.shared.screenView("Level - \(level.id)")
@@ -93,8 +89,14 @@ class LevelController: UIViewController, WKUIDelegate {
             
             let filename = "success"
             let ext = "m4a"
-            notificationFeedbackGenerator.prepare()
             
+            if #available(iOS 10.0, *) {
+                let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+                notificationFeedbackGenerator.prepare()
+                notificationFeedbackGenerator.notificationOccurred(.success)
+            } else {
+                // Fallback on earlier versions
+            }
             if let soundUrl = Bundle.main.url(forResource: filename, withExtension: ext) {
                 var soundId: SystemSoundID = 0
                 
@@ -105,7 +107,7 @@ class LevelController: UIViewController, WKUIDelegate {
                 }, nil)
                 
                 AudioServicesPlaySystemSound(soundId)
-                notificationFeedbackGenerator.notificationOccurred(.success)
+                
             }
             
             
