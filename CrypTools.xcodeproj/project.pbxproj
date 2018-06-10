@@ -34,6 +34,7 @@
 		6830702E20B6AD3A00BA2311 /* MarkdownStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6830702D20B6AD3A00BA2311 /* MarkdownStyle.swift */; };
 		684D930020B059550015B931 /* Down.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684D92FE20B059550015B931 /* Down.framework */; };
 		684D930120B059560015B931 /* Down.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 684D92FE20B059550015B931 /* Down.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		688F204D20CCC259007DA23B /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688F204C20CCC259007DA23B /* UITextView.swift */; };
 		6895B0A520C278A700BB26AB /* Tuto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6895B0A420C278A700BB26AB /* Tuto.storyboard */; };
 		6895B0A720C27AB200BB26AB /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6895B0A620C27AB200BB26AB /* Welcome.swift */; };
 		6895B0AA20C2843800BB26AB /* WelcomeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6895B0A920C2843800BB26AB /* WelcomeText.swift */; };
@@ -168,6 +169,7 @@
 		6830702C20B6955C00BA2311 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 		6830702D20B6AD3A00BA2311 /* MarkdownStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownStyle.swift; sourceTree = "<group>"; };
 		684D92FE20B059550015B931 /* Down.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Down.framework; path = Carthage/Build/iOS/Down.framework; sourceTree = "<group>"; };
+		688F204C20CCC259007DA23B /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		6895B0A420C278A700BB26AB /* Tuto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tuto.storyboard; sourceTree = "<group>"; };
 		6895B0A620C27AB200BB26AB /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		6895B0A920C2843800BB26AB /* WelcomeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeText.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				DD2DD3BD2084862B008951C1 /* PickerView.swift */,
 				DDE7D696208B257A001E4BFE /* GoogleReporter.swift */,
 				DD7FC4A4209C8FD40037B0B6 /* Zingle.swift */,
+				688F204C20CCC259007DA23B /* UITextView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				DDE7D697208B257A001E4BFE /* GoogleReporter.swift in Sources */,
 				DD4F8F7520872A72007CB8AA /* binascii.swift in Sources */,
 				6830702E20B6AD3A00BA2311 /* MarkdownStyle.swift in Sources */,
+				688F204D20CCC259007DA23B /* UITextView.swift in Sources */,
 				DD1D01E42080BEEC001D833C /* LevelCell.swift in Sources */,
 				6895B0AA20C2843800BB26AB /* WelcomeText.swift in Sources */,
 				DD4BDFA22081AF4900498B14 /* LevelController.swift in Sources */,
